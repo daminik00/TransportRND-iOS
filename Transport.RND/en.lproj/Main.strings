@@ -1,0 +1,54 @@
+
+/* Class = "UINavigationItem"; title = "Список"; ObjectID = "76Q-9Y-IjR"; */
+"76Q-9Y-IjR.title" = "Список";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "8XA-o9-b3N"; */
+"8XA-o9-b3N.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UINavigationItem"; title = "Категория"; ObjectID = "Kb4-An-fcD"; */
+"Kb4-An-fcD.title" = "Категория";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SRd-7z-kRE"; */
+"SRd-7z-kRE.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Показать транспорт"; ObjectID = "Xex-bQ-NoD"; */
+"Xex-bQ-NoD.normalTitle" = "Показать транспорт";
+
+/* Class = "UITabBarItem"; title = "Категория"; ObjectID = "Z5S-jK-X7M"; */
+"Z5S-jK-X7M.title" = "Категория";
+
+/* Class = "UITabBarItem"; title = "Навигация"; ObjectID = "czr-9K-0wf"; */
+"czr-9K-0wf.title" = "Навигация";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "ei2-xe-Wdu"; */
+"ei2-xe-Wdu.title" = "Item";
+
+/* Class = "UITextField"; placeholder = "До:"; ObjectID = "gSV-6Q-yG5"; */
+"gSV-6Q-yG5.placeholder" = "До:";
+
+/* Class = "UITextField"; placeholder = "От:"; ObjectID = "k1Q-0I-0Zk"; */
+"k1Q-0I-0Zk.placeholder" = "От:";
+
+/* Class = "UIBarButtonItem"; title = "Список"; ObjectID = "k5b-Xo-IF9"; */
+"k5b-Xo-IF9.title" = "Список";
+
+/* Class = "UIButton"; normalTitle = "Выбрать город"; ObjectID = "kYu-zj-LjW"; */
+"kYu-zj-LjW.normalTitle" = "Выбрать город";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "mZ7-yO-bfj"; */
+"mZ7-yO-bfj.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "Маршрут"; ObjectID = "nlF-kW-dAD"; */
+"nlF-kW-dAD.title" = "Маршрут";
+
+/* Class = "UITabBarItem"; title = "Маршруты"; ObjectID = "rco-Ue-EIN"; */
+"rco-Ue-EIN.title" = "Маршруты";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "wXt-Rj-lDs"; */
+"wXt-Rj-lDs.title" = "Item";
+
+/* Class = "UIBarButtonItem"; title = "Маршрут"; ObjectID = "xHo-mH-7X7"; */
+"xHo-mH-7X7.title" = "Маршрут";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "zbp-rl-rUz"; */
+"zbp-rl-rUz.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";

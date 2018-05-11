@@ -1,0 +1,775 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50B03A09F0C4FF8B3AF065AF /* Pods_Transport_RND.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82C3D77AB9D713D58627291 /* Pods_Transport_RND.framework */; };
+		BF041A112099C99F009EBEE3 /* TransportList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF041A102099C99F009EBEE3 /* TransportList.swift */; };
+		BF1111062089EA2900687D98 /* TransportMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1111052089EA2900687D98 /* TransportMap.swift */; };
+		BF111108208BC61A00687D98 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF111107208BC61A00687D98 /* InfoView.swift */; };
+		BF11110A208C6F5700687D98 /* TransportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF111109208C6F5700687D98 /* TransportViewController.swift */; };
+		BF11110C208C892800687D98 /* TransportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11110B208C892800687D98 /* TransportData.swift */; };
+		BF3F6B942056907F002D70B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3F6B932056907F002D70B3 /* AppDelegate.swift */; };
+		BF3F6B9C2056907F002D70B3 /* Transport_RND.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF3F6B9A2056907F002D70B3 /* Transport_RND.xcdatamodeld */; };
+		BF3F6BAE20569146002D70B3 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3F6BAA20569146002D70B3 /* ListViewController.swift */; };
+		BF3F6BAF20569146002D70B3 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3F6BAB20569146002D70B3 /* TriangleView.swift */; };
+		BF3F6BB020569146002D70B3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3F6BAC20569146002D70B3 /* MapViewController.swift */; };
+		BF3F6BB120569146002D70B3 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3F6BAD20569146002D70B3 /* City.swift */; };
+		BF521D4C2059BB6200BA7FCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF521D482059BB6200BA7FCB /* LaunchScreen.storyboard */; };
+		BF521D4D2059BB6200BA7FCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF521D4A2059BB6200BA7FCB /* Main.storyboard */; };
+		BF5387F8209DCD02009B9C49 /* MarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5387F7209DCD02009B9C49 /* MarkerView.swift */; };
+		BF5458702059B954001E438A /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54586F2059B954001E438A /* Car.swift */; };
+		BF63383D2060337E008B1906 /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6338252060337E008B1906 /* Directions.swift */; };
+		BF63383E2060337E008B1906 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6338262060337E008B1906 /* Location.swift */; };
+		BF63383F2060337E008B1906 /* Legs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6338272060337E008B1906 /* Legs.swift */; };
+		BF6338402060337E008B1906 /* Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6338282060337E008B1906 /* Distance.swift */; };
+		BF6338412060337E008B1906 /* Transit_details.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6338292060337E008B1906 /* Transit_details.swift */; };
+		BF6338422060337E008B1906 /* Bounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63382A2060337E008B1906 /* Bounds.swift */; };
+		BF6338432060337E008B1906 /* Northeast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63382B2060337E008B1906 /* Northeast.swift */; };
+		BF6338442060337E008B1906 /* Departure_stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63382C2060337E008B1906 /* Departure_stop.swift */; };
+		BF6338452060337E008B1906 /* Start_location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63382D2060337E008B1906 /* Start_location.swift */; };
+		BF6338462060337E008B1906 /* Arrival_stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63382E2060337E008B1906 /* Arrival_stop.swift */; };
+		BF6338472060337E008B1906 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63382F2060337E008B1906 /* Vehicle.swift */; };
+		BF6338482060337E008B1906 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6338302060337E008B1906 /* Steps.swift */; };
+		BF6338492060337E008B1906 /* Agencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6338312060337E008B1906 /* Agencies.swift */; };
+		BF63384A2060337E008B1906 /* Geocoded_waypoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6338322060337E008B1906 /* Geocoded_waypoints.swift */; };
+		BF63384B2060337E008B1906 /* Overview_polyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6338332060337E008B1906 /* Overview_polyline.swift */; };
+		BF63384C2060337E008B1906 /* End_location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6338342060337E008B1906 /* End_location.swift */; };
+		BF63384D2060337E008B1906 /* Arrival_time.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6338352060337E008B1906 /* Arrival_time.swift */; };
+		BF63384E2060337E008B1906 /* Departure_time.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6338362060337E008B1906 /* Departure_time.swift */; };
+		BF63384F2060337E008B1906 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6338372060337E008B1906 /* Line.swift */; };
+		BF6338502060337E008B1906 /* AllRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6338382060337E008B1906 /* AllRoutes.swift */; };
+		BF6338512060337E008B1906 /* Polyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6338392060337E008B1906 /* Polyline.swift */; };
+		BF6338522060337E008B1906 /* Southwest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63383A2060337E008B1906 /* Southwest.swift */; };
+		BF6338532060337E008B1906 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63383B2060337E008B1906 /* Routes.swift */; };
+		BF6338542060337E008B1906 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63383C2060337E008B1906 /* Duration.swift */; };
+		BF633856206033ED008B1906 /* DirectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF633855206033ED008B1906 /* DirectionViewController.swift */; };
+		BF6338582060340C008B1906 /* DrawRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6338572060340C008B1906 /* DrawRoute.swift */; };
+		BF63385A2060343E008B1906 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6338592060343E008B1906 /* CustomTableViewCell.swift */; };
+		BF63385C2061CC11008B1906 /* Markers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63385B2061CC11008B1906 /* Markers.swift */; };
+		BF63385E2061CCED008B1906 /* CatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63385D2061CCED008B1906 /* CatTableViewCell.swift */; };
+		BF8A280020A1CBB500E17A40 /* SwiftyOnboardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A27FC20A1CBB400E17A40 /* SwiftyOnboardPage.swift */; };
+		BF8A280120A1CBB500E17A40 /* SwiftyOnboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A27FD20A1CBB400E17A40 /* SwiftyOnboard.swift */; };
+		BF8A280220A1CBB500E17A40 /* SwiftyOnboardOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A27FF20A1CBB400E17A40 /* SwiftyOnboardOverlay.swift */; };
+		BF8A280A20A2D01C00E17A40 /* Background.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF8A280920A2D01C00E17A40 /* Background.xcassets */; };
+		BF8A281020A3A22000E17A40 /* onFav.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF8A280F20A3A22000E17A40 /* onFav.gif */; };
+		BFA5B96720A0D38D00E6E291 /* RoutesGov.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA5B96620A0D38D00E6E291 /* RoutesGov.swift */; };
+		BFA64C5A209EDAD700B8B7CC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA64C59209EDAD700B8B7CC /* Utils.swift */; };
+		BFBA20D6208341E000874D8D /* stops.json in Resources */ = {isa = PBXBuildFile; fileRef = BFBA20D5208341E000874D8D /* stops.json */; };
+		BFBA20D82083423000874D8D /* routes.json in Resources */ = {isa = PBXBuildFile; fileRef = BFBA20D72083423000874D8D /* routes.json */; };
+		BFBA20DB2083444000874D8D /* StopsControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA20DA2083444000874D8D /* StopsControll.swift */; };
+		BFE16B4220570BE00075E29F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE16B4120570BE00075E29F /* Assets.xcassets */; };
+		BFE63F372059BD1600377207 /* TypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE63F362059BD1600377207 /* TypeViewController.swift */; };
+		BFF602FA20A15D0C00395D98 /* OnBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF602F920A15D0C00395D98 /* OnBoardViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00BEA66E89A12AB0DE242428 /* Pods-Transport.RND.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transport.RND.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Transport.RND/Pods-Transport.RND.debug.xcconfig"; sourceTree = "<group>"; };
+		240AF2CDA8F5A5C331DAD698 /* Pods-Transport.RND.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transport.RND.release.xcconfig"; path = "Pods/Target Support Files/Pods-Transport.RND/Pods-Transport.RND.release.xcconfig"; sourceTree = "<group>"; };
+		BF041A102099C99F009EBEE3 /* TransportList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransportList.swift; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/TransportList.swift"; sourceTree = "<group>"; };
+		BF1111052089EA2900687D98 /* TransportMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportMap.swift; sourceTree = "<group>"; };
+		BF111107208BC61A00687D98 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		BF111109208C6F5700687D98 /* TransportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportViewController.swift; sourceTree = "<group>"; };
+		BF11110B208C892800687D98 /* TransportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportData.swift; sourceTree = "<group>"; };
+		BF3F6B902056907F002D70B3 /* Transport.RND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transport.RND.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF3F6B932056907F002D70B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF3F6B9B2056907F002D70B3 /* Transport_RND.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Transport_RND.xcdatamodel; sourceTree = "<group>"; };
+		BF3F6BA22056907F002D70B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF3F6BAA20569146002D70B3 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		BF3F6BAB20569146002D70B3 /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
+		BF3F6BAC20569146002D70B3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BF3F6BAD20569146002D70B3 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		BF521D492059BB6200BA7FCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF521D4B2059BB6200BA7FCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF5387F7209DCD02009B9C49 /* MarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerView.swift; sourceTree = "<group>"; };
+		BF54586F2059B954001E438A /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		BF6338252060337E008B1906 /* Directions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Directions.swift; sourceTree = "<group>"; };
+		BF6338262060337E008B1906 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		BF6338272060337E008B1906 /* Legs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Legs.swift; sourceTree = "<group>"; };
+		BF6338282060337E008B1906 /* Distance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distance.swift; sourceTree = "<group>"; };
+		BF6338292060337E008B1906 /* Transit_details.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transit_details.swift; sourceTree = "<group>"; };
+		BF63382A2060337E008B1906 /* Bounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bounds.swift; sourceTree = "<group>"; };
+		BF63382B2060337E008B1906 /* Northeast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Northeast.swift; sourceTree = "<group>"; };
+		BF63382C2060337E008B1906 /* Departure_stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Departure_stop.swift; sourceTree = "<group>"; };
+		BF63382D2060337E008B1906 /* Start_location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Start_location.swift; sourceTree = "<group>"; };
+		BF63382E2060337E008B1906 /* Arrival_stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arrival_stop.swift; sourceTree = "<group>"; };
+		BF63382F2060337E008B1906 /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		BF6338302060337E008B1906 /* Steps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
+		BF6338312060337E008B1906 /* Agencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agencies.swift; sourceTree = "<group>"; };
+		BF6338322060337E008B1906 /* Geocoded_waypoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geocoded_waypoints.swift; sourceTree = "<group>"; };
+		BF6338332060337E008B1906 /* Overview_polyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Overview_polyline.swift; sourceTree = "<group>"; };
+		BF6338342060337E008B1906 /* End_location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = End_location.swift; sourceTree = "<group>"; };
+		BF6338352060337E008B1906 /* Arrival_time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arrival_time.swift; sourceTree = "<group>"; };
+		BF6338362060337E008B1906 /* Departure_time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Departure_time.swift; sourceTree = "<group>"; };
+		BF6338372060337E008B1906 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		BF6338382060337E008B1906 /* AllRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllRoutes.swift; sourceTree = "<group>"; };
+		BF6338392060337E008B1906 /* Polyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polyline.swift; sourceTree = "<group>"; };
+		BF63383A2060337E008B1906 /* Southwest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Southwest.swift; sourceTree = "<group>"; };
+		BF63383B2060337E008B1906 /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		BF63383C2060337E008B1906 /* Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
+		BF633855206033ED008B1906 /* DirectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionViewController.swift; sourceTree = "<group>"; };
+		BF6338572060340C008B1906 /* DrawRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawRoute.swift; sourceTree = "<group>"; };
+		BF6338592060343E008B1906 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		BF63385B2061CC11008B1906 /* Markers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Markers.swift; sourceTree = "<group>"; };
+		BF63385D2061CCED008B1906 /* CatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatTableViewCell.swift; sourceTree = "<group>"; };
+		BF8A27FC20A1CBB400E17A40 /* SwiftyOnboardPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyOnboardPage.swift; sourceTree = "<group>"; };
+		BF8A27FD20A1CBB400E17A40 /* SwiftyOnboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyOnboard.swift; sourceTree = "<group>"; };
+		BF8A27FE20A1CBB400E17A40 /* SwiftyOnboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyOnboard.h; sourceTree = "<group>"; };
+		BF8A27FF20A1CBB400E17A40 /* SwiftyOnboardOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyOnboardOverlay.swift; sourceTree = "<group>"; };
+		BF8A280920A2D01C00E17A40 /* Background.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Background.xcassets; sourceTree = "<group>"; };
+		BF8A280F20A3A22000E17A40 /* onFav.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = onFav.gif; sourceTree = "<group>"; };
+		BFA5B96620A0D38D00E6E291 /* RoutesGov.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesGov.swift; sourceTree = "<group>"; };
+		BFA64C59209EDAD700B8B7CC /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		BFBA20D12083349F00874D8D /* Transport.RND.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Transport.RND.entitlements; sourceTree = "<group>"; };
+		BFBA20D5208341E000874D8D /* stops.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = stops.json; sourceTree = "<group>"; };
+		BFBA20D72083423000874D8D /* routes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = routes.json; sourceTree = "<group>"; };
+		BFBA20DA2083444000874D8D /* StopsControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopsControll.swift; sourceTree = "<group>"; };
+		BFE16B4120570BE00075E29F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFE63F362059BD1600377207 /* TypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeViewController.swift; sourceTree = "<group>"; };
+		BFF602F920A15D0C00395D98 /* OnBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardViewController.swift; sourceTree = "<group>"; };
+		F82C3D77AB9D713D58627291 /* Pods_Transport_RND.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transport_RND.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF3F6B8D2056907F002D70B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50B03A09F0C4FF8B3AF065AF /* Pods_Transport_RND.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33F07BB831B779EA1D787163 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F82C3D77AB9D713D58627291 /* Pods_Transport_RND.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73DCB71A445E2631083E216F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00BEA66E89A12AB0DE242428 /* Pods-Transport.RND.debug.xcconfig */,
+				240AF2CDA8F5A5C331DAD698 /* Pods-Transport.RND.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BF3F6B872056907F002D70B3 = {
+			isa = PBXGroup;
+			children = (
+				BF3F6B922056907F002D70B3 /* Transport.RND */,
+				BF3F6B912056907F002D70B3 /* Products */,
+				73DCB71A445E2631083E216F /* Pods */,
+				33F07BB831B779EA1D787163 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BF3F6B912056907F002D70B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF3F6B902056907F002D70B3 /* Transport.RND.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF3F6B922056907F002D70B3 /* Transport.RND */ = {
+			isa = PBXGroup;
+			children = (
+				BF3F6B932056907F002D70B3 /* AppDelegate.swift */,
+				BF1111052089EA2900687D98 /* TransportMap.swift */,
+				BF041A102099C99F009EBEE3 /* TransportList.swift */,
+				BF63385B2061CC11008B1906 /* Markers.swift */,
+				BFBA20D2208336D300874D8D /* ViewControllers */,
+				BFBA20D32083373A00874D8D /* CustomViews */,
+				BF6338242060337E008B1906 /* JSON */,
+				BFBA20D4208341CF00874D8D /* res */,
+				BFBA20D92083442100874D8D /* helpers */,
+				BF521D4A2059BB6200BA7FCB /* Main.storyboard */,
+				BF521D482059BB6200BA7FCB /* LaunchScreen.storyboard */,
+				BFBA20D12083349F00874D8D /* Transport.RND.entitlements */,
+				BFE16B4120570BE00075E29F /* Assets.xcassets */,
+				BF8A280920A2D01C00E17A40 /* Background.xcassets */,
+				BF3F6B9A2056907F002D70B3 /* Transport_RND.xcdatamodeld */,
+				BF3F6BA22056907F002D70B3 /* Info.plist */,
+			);
+			path = Transport.RND;
+			sourceTree = "<group>";
+		};
+		BF6338242060337E008B1906 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				BF6338252060337E008B1906 /* Directions.swift */,
+				BF6338262060337E008B1906 /* Location.swift */,
+				BF6338272060337E008B1906 /* Legs.swift */,
+				BF6338282060337E008B1906 /* Distance.swift */,
+				BF6338292060337E008B1906 /* Transit_details.swift */,
+				BF63382A2060337E008B1906 /* Bounds.swift */,
+				BF63382B2060337E008B1906 /* Northeast.swift */,
+				BF63382C2060337E008B1906 /* Departure_stop.swift */,
+				BF63382D2060337E008B1906 /* Start_location.swift */,
+				BF63382E2060337E008B1906 /* Arrival_stop.swift */,
+				BF63382F2060337E008B1906 /* Vehicle.swift */,
+				BF6338302060337E008B1906 /* Steps.swift */,
+				BF6338312060337E008B1906 /* Agencies.swift */,
+				BF6338322060337E008B1906 /* Geocoded_waypoints.swift */,
+				BF6338332060337E008B1906 /* Overview_polyline.swift */,
+				BF6338342060337E008B1906 /* End_location.swift */,
+				BF6338352060337E008B1906 /* Arrival_time.swift */,
+				BF6338362060337E008B1906 /* Departure_time.swift */,
+				BF6338372060337E008B1906 /* Line.swift */,
+				BF6338382060337E008B1906 /* AllRoutes.swift */,
+				BF6338392060337E008B1906 /* Polyline.swift */,
+				BF63383A2060337E008B1906 /* Southwest.swift */,
+				BF63383B2060337E008B1906 /* Routes.swift */,
+				BF63383C2060337E008B1906 /* Duration.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		BF8A27FB20A1CBA100E17A40 /* SwiftyOnboard */ = {
+			isa = PBXGroup;
+			children = (
+				BF8A27FE20A1CBB400E17A40 /* SwiftyOnboard.h */,
+				BF8A27FD20A1CBB400E17A40 /* SwiftyOnboard.swift */,
+				BF8A27FF20A1CBB400E17A40 /* SwiftyOnboardOverlay.swift */,
+				BF8A27FC20A1CBB400E17A40 /* SwiftyOnboardPage.swift */,
+			);
+			path = SwiftyOnboard;
+			sourceTree = "<group>";
+		};
+		BF8A280520A2CF5700E17A40 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				BF8A280F20A3A22000E17A40 /* onFav.gif */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		BF8A280620A2CF5E00E17A40 /* video */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = video;
+			sourceTree = "<group>";
+		};
+		BFBA20D2208336D300874D8D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFE63F362059BD1600377207 /* TypeViewController.swift */,
+				BF3F6BAA20569146002D70B3 /* ListViewController.swift */,
+				BF633855206033ED008B1906 /* DirectionViewController.swift */,
+				BF3F6BAC20569146002D70B3 /* MapViewController.swift */,
+				BF111109208C6F5700687D98 /* TransportViewController.swift */,
+				BFF602F920A15D0C00395D98 /* OnBoardViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BFBA20D32083373A00874D8D /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				BF8A27FB20A1CBA100E17A40 /* SwiftyOnboard */,
+				BF3F6BAB20569146002D70B3 /* TriangleView.swift */,
+				BF6338592060343E008B1906 /* CustomTableViewCell.swift */,
+				BF63385D2061CCED008B1906 /* CatTableViewCell.swift */,
+				BF111107208BC61A00687D98 /* InfoView.swift */,
+				BF5387F7209DCD02009B9C49 /* MarkerView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		BFBA20D4208341CF00874D8D /* res */ = {
+			isa = PBXGroup;
+			children = (
+				BF8A280620A2CF5E00E17A40 /* video */,
+				BF8A280520A2CF5700E17A40 /* img */,
+				BFBA20D5208341E000874D8D /* stops.json */,
+				BFBA20D72083423000874D8D /* routes.json */,
+				BFA5B96620A0D38D00E6E291 /* RoutesGov.swift */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		BFBA20D92083442100874D8D /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BF3F6BAD20569146002D70B3 /* City.swift */,
+				BF54586F2059B954001E438A /* Car.swift */,
+				BFBA20DA2083444000874D8D /* StopsControll.swift */,
+				BF11110B208C892800687D98 /* TransportData.swift */,
+				BF6338572060340C008B1906 /* DrawRoute.swift */,
+				BFA64C59209EDAD700B8B7CC /* Utils.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF3F6B8F2056907F002D70B3 /* Transport.RND */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF3F6BA52056907F002D70B3 /* Build configuration list for PBXNativeTarget "Transport.RND" */;
+			buildPhases = (
+				8CA9D58426AF8493F360E7F3 /* [CP] Check Pods Manifest.lock */,
+				BF3F6B8C2056907F002D70B3 /* Sources */,
+				BF3F6B8D2056907F002D70B3 /* Frameworks */,
+				BF3F6B8E2056907F002D70B3 /* Resources */,
+				F8DB23C39DE88946A756D99D /* [CP] Embed Pods Frameworks */,
+				76EBA83F5BC6030A8F7F9917 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Transport.RND;
+			productName = Transport.RND;
+			productReference = BF3F6B902056907F002D70B3 /* Transport.RND.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF3F6B882056907F002D70B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = daminik00.dev;
+				TargetAttributes = {
+					BF3F6B8F2056907F002D70B3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = BF3F6B8B2056907F002D70B3 /* Build configuration list for PBXProject "Transport.RND" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF3F6B872056907F002D70B3;
+			productRefGroup = BF3F6B912056907F002D70B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF3F6B8F2056907F002D70B3 /* Transport.RND */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF3F6B8E2056907F002D70B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFBA20D82083423000874D8D /* routes.json in Resources */,
+				BFBA20D6208341E000874D8D /* stops.json in Resources */,
+				BF521D4D2059BB6200BA7FCB /* Main.storyboard in Resources */,
+				BFE16B4220570BE00075E29F /* Assets.xcassets in Resources */,
+				BF521D4C2059BB6200BA7FCB /* LaunchScreen.storyboard in Resources */,
+				BF8A281020A3A22000E17A40 /* onFav.gif in Resources */,
+				BF8A280A20A2D01C00E17A40 /* Background.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		76EBA83F5BC6030A8F7F9917 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Transport.RND/Pods-Transport.RND-resources.sh",
+				"${PODS_ROOT}/Appodeal/Appodeal.bundle",
+				"${PODS_ROOT}/Appodeal/APDStartAppAdapter.embeddedframework/Resources/StartApp.bundle",
+				"${PODS_ROOT}/Appodeal/APDTapjoyAdapter.embeddedframework/Resources/TapjoyResources.bundle",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPAdBrowserController.xib",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPCloseBtn.png",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPCloseBtn@2x.png",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPCloseBtn@3x.png",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPCloseButtonX.png",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPCloseButtonX@2x.png",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPCloseButtonX@3x.png",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPDAAIcon.png",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPDAAIcon@2x.png",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPDAAIcon@3x.png",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPMutedBtn.png",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPMutedBtn@2x.png",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPMutedBtn@3x.png",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPPlayBtn.png",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPPlayBtn@2x.png",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPPlayBtn@3x.png",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPUnmutedBtn.png",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPUnmutedBtn@2x.png",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MPUnmutedBtn@3x.png",
+				"${PODS_ROOT}/Appodeal/APDTwitterMoPubAdapter.embeddedframework/Resources/MRAID.bundle",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Appodeal.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/StartApp.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TapjoyResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPAdBrowserController.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseButtonX.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseButtonX@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseButtonX@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDAAIcon.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDAAIcon@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDAAIcon@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPMutedBtn.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPMutedBtn@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPMutedBtn@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPPlayBtn.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPPlayBtn@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPPlayBtn@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPUnmutedBtn.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPUnmutedBtn@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPUnmutedBtn@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MRAID.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Transport.RND/Pods-Transport.RND-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CA9D58426AF8493F360E7F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Transport.RND-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8DB23C39DE88946A756D99D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Transport.RND/Pods-Transport.RND-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GooglePlacesAPI/GooglePlacesAPI.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/TemporaryAlert/TemporaryAlert.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GooglePlacesAPI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TemporaryAlert.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Transport.RND/Pods-Transport.RND-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF3F6B8C2056907F002D70B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF6338442060337E008B1906 /* Departure_stop.swift in Sources */,
+				BF6338482060337E008B1906 /* Steps.swift in Sources */,
+				BF11110A208C6F5700687D98 /* TransportViewController.swift in Sources */,
+				BFBA20DB2083444000874D8D /* StopsControll.swift in Sources */,
+				BF63384D2060337E008B1906 /* Arrival_time.swift in Sources */,
+				BF6338462060337E008B1906 /* Arrival_stop.swift in Sources */,
+				BFF602FA20A15D0C00395D98 /* OnBoardViewController.swift in Sources */,
+				BF6338402060337E008B1906 /* Distance.swift in Sources */,
+				BF63385C2061CC11008B1906 /* Markers.swift in Sources */,
+				BFA5B96720A0D38D00E6E291 /* RoutesGov.swift in Sources */,
+				BF8A280020A1CBB500E17A40 /* SwiftyOnboardPage.swift in Sources */,
+				BF6338502060337E008B1906 /* AllRoutes.swift in Sources */,
+				BF11110C208C892800687D98 /* TransportData.swift in Sources */,
+				BF8A280120A1CBB500E17A40 /* SwiftyOnboard.swift in Sources */,
+				BF111108208BC61A00687D98 /* InfoView.swift in Sources */,
+				BF6338532060337E008B1906 /* Routes.swift in Sources */,
+				BF6338472060337E008B1906 /* Vehicle.swift in Sources */,
+				BF3F6BB020569146002D70B3 /* MapViewController.swift in Sources */,
+				BF63384A2060337E008B1906 /* Geocoded_waypoints.swift in Sources */,
+				BFE63F372059BD1600377207 /* TypeViewController.swift in Sources */,
+				BF63384E2060337E008B1906 /* Departure_time.swift in Sources */,
+				BF6338452060337E008B1906 /* Start_location.swift in Sources */,
+				BF6338412060337E008B1906 /* Transit_details.swift in Sources */,
+				BF63385E2061CCED008B1906 /* CatTableViewCell.swift in Sources */,
+				BFA64C5A209EDAD700B8B7CC /* Utils.swift in Sources */,
+				BF633856206033ED008B1906 /* DirectionViewController.swift in Sources */,
+				BF8A280220A1CBB500E17A40 /* SwiftyOnboardOverlay.swift in Sources */,
+				BF63383E2060337E008B1906 /* Location.swift in Sources */,
+				BF6338542060337E008B1906 /* Duration.swift in Sources */,
+				BF3F6BB120569146002D70B3 /* City.swift in Sources */,
+				BF6338492060337E008B1906 /* Agencies.swift in Sources */,
+				BF63384F2060337E008B1906 /* Line.swift in Sources */,
+				BF3F6BAE20569146002D70B3 /* ListViewController.swift in Sources */,
+				BF63384B2060337E008B1906 /* Overview_polyline.swift in Sources */,
+				BF5387F8209DCD02009B9C49 /* MarkerView.swift in Sources */,
+				BF6338512060337E008B1906 /* Polyline.swift in Sources */,
+				BF3F6B942056907F002D70B3 /* AppDelegate.swift in Sources */,
+				BF6338422060337E008B1906 /* Bounds.swift in Sources */,
+				BF3F6BAF20569146002D70B3 /* TriangleView.swift in Sources */,
+				BF6338432060337E008B1906 /* Northeast.swift in Sources */,
+				BF041A112099C99F009EBEE3 /* TransportList.swift in Sources */,
+				BF5458702059B954001E438A /* Car.swift in Sources */,
+				BF63384C2060337E008B1906 /* End_location.swift in Sources */,
+				BF6338522060337E008B1906 /* Southwest.swift in Sources */,
+				BF63383F2060337E008B1906 /* Legs.swift in Sources */,
+				BF63385A2060343E008B1906 /* CustomTableViewCell.swift in Sources */,
+				BF6338582060340C008B1906 /* DrawRoute.swift in Sources */,
+				BF63383D2060337E008B1906 /* Directions.swift in Sources */,
+				BF1111062089EA2900687D98 /* TransportMap.swift in Sources */,
+				BF3F6B9C2056907F002D70B3 /* Transport_RND.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BF521D482059BB6200BA7FCB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF521D492059BB6200BA7FCB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BF521D4A2059BB6200BA7FCB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF521D4B2059BB6200BA7FCB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF3F6BA32056907F002D70B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF3F6BA42056907F002D70B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF3F6BA62056907F002D70B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00BEA66E89A12AB0DE242428 /* Pods-Transport.RND.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4X4HAH2D2G;
+				INFOPLIST_FILE = Transport.RND/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.daminik00.Transport-RND";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF3F6BA72056907F002D70B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 240AF2CDA8F5A5C331DAD698 /* Pods-Transport.RND.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4X4HAH2D2G;
+				INFOPLIST_FILE = Transport.RND/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.daminik00.Transport-RND";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF3F6B8B2056907F002D70B3 /* Build configuration list for PBXProject "Transport.RND" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF3F6BA32056907F002D70B3 /* Debug */,
+				BF3F6BA42056907F002D70B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF3F6BA52056907F002D70B3 /* Build configuration list for PBXNativeTarget "Transport.RND" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF3F6BA62056907F002D70B3 /* Debug */,
+				BF3F6BA72056907F002D70B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF3F6B9A2056907F002D70B3 /* Transport_RND.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF3F6B9B2056907F002D70B3 /* Transport_RND.xcdatamodel */,
+			);
+			currentVersion = BF3F6B9B2056907F002D70B3 /* Transport_RND.xcdatamodel */;
+			path = Transport_RND.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BF3F6B882056907F002D70B3 /* Project object */;
+}
