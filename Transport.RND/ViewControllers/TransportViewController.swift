@@ -65,7 +65,7 @@ class TransportViewController: UIViewController, CameraPositionDelegate {
         if let _ = transport {
             transport.stop()
         }
-        TransportList.shared.removeAll()
+        TransportManager.shared.removeAll()
     }
     
     
@@ -86,7 +86,7 @@ extension TransportViewController: GMSMapViewDelegate {
                                topLeftLng: projection.farLeft.longitude,
                                topRightLng: projection.farRight.longitude,
                                bottomLeftLat: projection.nearLeft.latitude)
-            TransportList.shared.updateAll { (lat, lng) -> Bool in
+            TransportManager.shared.updateAll { (lat, lng) -> Bool in
                 return Utils.checkPosition(lat, lng: lng, delegate: self)
             }
     }

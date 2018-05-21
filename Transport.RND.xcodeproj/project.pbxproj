@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		50B03A09F0C4FF8B3AF065AF /* Pods_Transport_RND.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82C3D77AB9D713D58627291 /* Pods_Transport_RND.framework */; };
-		BF041A112099C99F009EBEE3 /* TransportList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF041A102099C99F009EBEE3 /* TransportList.swift */; };
+		BF041A112099C99F009EBEE3 /* TransportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF041A102099C99F009EBEE3 /* TransportManager.swift */; };
 		BF1111062089EA2900687D98 /* TransportMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1111052089EA2900687D98 /* TransportMap.swift */; };
 		BF111108208BC61A00687D98 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF111107208BC61A00687D98 /* InfoView.swift */; };
 		BF11110A208C6F5700687D98 /* TransportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF111109208C6F5700687D98 /* TransportViewController.swift */; };
@@ -70,7 +70,7 @@
 /* Begin PBXFileReference section */
 		00BEA66E89A12AB0DE242428 /* Pods-Transport.RND.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transport.RND.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Transport.RND/Pods-Transport.RND.debug.xcconfig"; sourceTree = "<group>"; };
 		240AF2CDA8F5A5C331DAD698 /* Pods-Transport.RND.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transport.RND.release.xcconfig"; path = "Pods/Target Support Files/Pods-Transport.RND/Pods-Transport.RND.release.xcconfig"; sourceTree = "<group>"; };
-		BF041A102099C99F009EBEE3 /* TransportList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransportList.swift; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/TransportList.swift"; sourceTree = "<group>"; };
+		BF041A102099C99F009EBEE3 /* TransportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransportManager.swift; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/TransportManager.swift"; sourceTree = "<group>"; };
 		BF1111052089EA2900687D98 /* TransportMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportMap.swift; sourceTree = "<group>"; };
 		BF111107208BC61A00687D98 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		BF111109208C6F5700687D98 /* TransportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportViewController.swift; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 			children = (
 				BF3F6B932056907F002D70B3 /* AppDelegate.swift */,
 				BF1111052089EA2900687D98 /* TransportMap.swift */,
-				BF041A102099C99F009EBEE3 /* TransportList.swift */,
+				BF041A102099C99F009EBEE3 /* TransportManager.swift */,
 				BF63385B2061CC11008B1906 /* Markers.swift */,
 				BFBA20D2208336D300874D8D /* ViewControllers */,
 				BFBA20D32083373A00874D8D /* CustomViews */,
@@ -254,13 +254,6 @@
 			path = img;
 			sourceTree = "<group>";
 		};
-		BF8A280620A2CF5E00E17A40 /* video */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = video;
-			sourceTree = "<group>";
-		};
 		BFBA20D2208336D300874D8D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,7 +283,6 @@
 		BFBA20D4208341CF00874D8D /* res */ = {
 			isa = PBXGroup;
 			children = (
-				BF8A280620A2CF5E00E17A40 /* video */,
 				BF8A280520A2CF5700E17A40 /* img */,
 				BFBA20D5208341E000874D8D /* stops.json */,
 				BFBA20D72083423000874D8D /* routes.json */,
@@ -555,7 +547,7 @@
 				BF6338422060337E008B1906 /* Bounds.swift in Sources */,
 				BF3F6BAF20569146002D70B3 /* TriangleView.swift in Sources */,
 				BF6338432060337E008B1906 /* Northeast.swift in Sources */,
-				BF041A112099C99F009EBEE3 /* TransportList.swift in Sources */,
+				BF041A112099C99F009EBEE3 /* TransportManager.swift in Sources */,
 				BF5458702059B954001E438A /* Car.swift in Sources */,
 				BF63384C2060337E008B1906 /* End_location.swift in Sources */,
 				BF6338522060337E008B1906 /* Southwest.swift in Sources */,

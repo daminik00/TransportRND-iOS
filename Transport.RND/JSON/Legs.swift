@@ -22,7 +22,9 @@ struct Legs : Codable {
 	let start_address : String?
 	let start_location : Start_location?
 	let steps : [Steps]?
-	let traffic_speed_entry : [String]?
+	let traffic_peed_entry : [String]?
 	let via_waypoint : [String]?
+    
+    
 
 }

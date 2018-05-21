@@ -41,7 +41,7 @@ class TransportMap: NSObject {
     var city = CitySettings()
     fileprivate var context: NSManagedObjectContext!
     
-    let tList = TransportList.shared
+    let tList = TransportManager.shared
     
     init(_ _vc: TransportMapDelegate) {
         super.init()

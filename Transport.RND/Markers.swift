@@ -127,6 +127,7 @@ class Marker: GMSMarker {
 }
 
 
+
 struct MarkerSettings {
     var route: String?
     var number: String?

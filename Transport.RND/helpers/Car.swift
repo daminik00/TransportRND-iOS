@@ -32,7 +32,6 @@ struct Info: Codable {
 }
 
 struct Car {
-    
     var checkFlag = false
     
     var number: String?

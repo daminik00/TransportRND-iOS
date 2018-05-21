@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let _ = TransportList.shared
+        let _ = TransportManager.shared
         Appsee.start()
         
 //        setTheme(FlatNavyBlueDark())
