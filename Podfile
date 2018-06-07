@@ -10,7 +10,7 @@ pod 'GooglePlacePicker'
 pod 'Appodeal', '~> 2.1.7'
 pod 'Appsee'
 pod 'TemporaryAlert'
-pod 'ChameleonFramework/Swift'
+pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 pod 'Onboard'
 pod 'SVProgressHUD'
 end

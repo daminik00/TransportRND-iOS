@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina5_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,18 +15,61 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainLoad-X" translatesAutoresizingMaskIntoConstraints="NO" id="KUU-6c-tnY">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainLoad-X" translatesAutoresizingMaskIntoConstraints="NO" id="KUU-6c-tnY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4o-jG-mnj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                <color key="backgroundColor" red="0.32941176470588235" green="0.3843137254901961" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.15868747234344482" green="0.21822044253349304" blue="0.30320093035697937" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUn-XI-drQ">
+                                <rect key="frame" x="0.0" y="729" width="375" height="83"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="Категория" image="albums" id="Ztd-fl-7XG">
+                                        <color key="badgeColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="Маршруты" image="route" id="jhd-ao-SeV"/>
+                                    <tabBarItem title="Навигация" image="navigation" id="EW0-RG-4Td"/>
+                                </items>
+                            </tabBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjh-Tm-hzr">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="barTintColor" red="0.15868747234344482" green="0.21822044253349304" blue="0.30320093035697937" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Категория" id="Pa8-sH-FUu">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="info" id="6dm-6o-62L">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="yTU-gA-jXq">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="o4o-jG-mnj" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="1WF-GR-AOW"/>
+                            <constraint firstAttribute="bottom" secondItem="BUn-XI-drQ" secondAttribute="bottom" id="2ML-p6-ims"/>
+                            <constraint firstItem="BUn-XI-drQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AYk-KP-8ut"/>
+                            <constraint firstItem="fjh-Tm-hzr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D9v-n1-Yqd"/>
                             <constraint firstAttribute="bottom" secondItem="KUU-6c-tnY" secondAttribute="bottom" id="HU2-yM-Sg2"/>
+                            <constraint firstItem="fjh-Tm-hzr" firstAttribute="top" secondItem="o4o-jG-mnj" secondAttribute="bottom" constant="-4" id="O5e-r7-mYd"/>
                             <constraint firstItem="KUU-6c-tnY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RVZ-DV-et1"/>
+                            <constraint firstItem="fjh-Tm-hzr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="U7j-Fm-egr"/>
+                            <constraint firstItem="o4o-jG-mnj" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="fNq-Ya-buH"/>
                             <constraint firstItem="KUU-6c-tnY" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ffV-9d-Dp2"/>
+                            <constraint firstItem="fjh-Tm-hzr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="i3V-ny-mQv"/>
+                            <constraint firstAttribute="trailing" secondItem="o4o-jG-mnj" secondAttribute="trailing" id="ouR-eu-XXx"/>
+                            <constraint firstItem="BUn-XI-drQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tOY-Bi-OLw"/>
                             <constraint firstItem="KUU-6c-tnY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xRh-nS-5u9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -34,10 +77,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.6305418719212"/>
+            <point key="canvasLocation" x="50.724637681159422" y="374.18478260869568"/>
         </scene>
     </scenes>
     <resources>
         <image name="MainLoad-X" width="1125" height="2436"/>
+        <image name="albums" width="30" height="30"/>
+        <image name="info" width="30" height="30"/>
+        <image name="navigation" width="30" height="30"/>
+        <image name="route" width="30" height="30"/>
     </resources>
 </document>
