@@ -24,6 +24,14 @@ class ListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 11.0, *) {
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+            
+            let searchController = UISearchController(searchResultsController: nil)
+            navigationItem.searchController = searchController
+        } else {
+            // Fallback on earlier versions
+        }
         self.context = ((UIApplication.shared.delegate) as! AppDelegate).persistentContainer.viewContext
         tableView.delegate = self
         tableView.dataSource = self
@@ -92,6 +100,10 @@ class ListViewController: UIViewController {
             return nil
         }
     }
+}
+
+extension ListViewController: UISearchControllerDelegate {
+    
 }
 
 

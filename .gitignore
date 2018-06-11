@@ -3,4 +3,9 @@ Podfile.lock
 Pods
 fastlane
 Gemfile
+.ideaPodfile.lock
+.DS_Store
+Pods
+fastlane
+Gemfile
 .idea

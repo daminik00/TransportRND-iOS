@@ -18,6 +18,11 @@ class MapViewController: TransportViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 11.0, *) {
+            navigationItem.largeTitleDisplayMode = .never
+        } else {
+            // Fallback on earlier versions
+        }
         if self.transportData?.type.count != 0 {
             self.title = Car.getInfo(type: (self.transportData?.type[0])!).nameRuS
         }
@@ -28,6 +33,7 @@ class MapViewController: TransportViewController, CLLocationManagerDelegate {
         self.checkCity()
         self.setMap()
         SVProgressHUD.show()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -25,6 +25,13 @@ class TypeViewController: UIViewController, AppodealInterstitialDelegate, Appode
     var callHeight: CGFloat = 55
     
     override func viewDidLoad() {
+        
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+        } else {
+            // Fallback on earlier versions
+        }
+        
         self.context = ((UIApplication.shared.delegate) as! AppDelegate).persistentContainer.viewContext
         tabeView.delegate = self
         tabeView.dataSource = self

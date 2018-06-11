@@ -36,6 +36,12 @@ class DirectionViewController: TransportViewController, CLLocationManagerDelegat
         super.viewDidLoad()
         setLocation()
         
+        if #available(iOS 11.0, *) {
+//            navigationController?.navigationBar.prefersLargeTitles = true
+        } else {
+            // Fallback on earlier versions
+        }
+        
 //        let frame = CGRect(x: 0, y: 0, width: viewMap.frame.width, height: viewMap.frame.height)
         var height = view.frame.height-64-98-49
         let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: height)
