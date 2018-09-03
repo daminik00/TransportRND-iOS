@@ -30,7 +30,6 @@ class MapViewController: TransportViewController, CLLocationManagerDelegate {
                                topLeftLng: 39.338706,
                                topRightLng: 40.098136,
                                bottomLeftLat: 47.079389)
-        self.checkCity()
         self.setMap()
         SVProgressHUD.show()
         
@@ -43,6 +42,7 @@ class MapViewController: TransportViewController, CLLocationManagerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         determineMyCurrentLocation()
+//        setNavView()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -120,33 +120,41 @@ class MapViewController: TransportViewController, CLLocationManagerDelegate {
         }
     }
     
+//    override func updateStart() {
+//        (navigationItem.titleView as? UITextView)?.text = "\(self.titleText)..."
+//    }
+//
+//    override func updateEnd() {
+//        DispatchQueue.main.async {
+//            (self.navigationItem.titleView as? UITextView)?.text = self.titleText
+//        }
+//    }
+    
 }
 
 extension MapViewController {
     
-    func checkCity() {
-        do {
-            let fetchRequest: NSFetchRequest<CityData> = CityData.fetchRequest()
-            let cities = try self.context.fetch(fetchRequest)
-            if cities.count > 0 {
-                switch (cities.last?.name)! {
-                case "Ростов":
-                    self.city = CitySettings(city: .rostov)
-                case "Краснодар":
-                    self.city = CitySettings(city: .krasnodar)
-                case "Челябинск":
-                    self.city = CitySettings(city: .chelyabinsk)
-                default:
-                    self.city = CitySettings(city: .rostov)
-                }
+    var titleText: String {
+        if self.transportData?.type.count != 0 {
+            if let type = self.transportData?.type[0] {
+                return Car.getInfo(type: type).nameRuS
             }
-        } catch {
-            print(error.localizedDescription)
         }
+        return ""
+    }
+    
+    func setNavView() {
+        navigationItem.title = nil
+        let tw = UITextView(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        tw.text = titleText
+        tw.textAlignment = .center
+        tw.font = UIFont(name: (tw.font?.fontName)!, size: 20)
+        tw.textColor = .white
+        tw.backgroundColor = UIColor(white: 0, alpha: 0)
+        navigationItem.titleView = tw
     }
     
 }
-
 
 
 

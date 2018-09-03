@@ -10,7 +10,6 @@ import UIKit
 import CoreData
 import GoogleMaps
 import GooglePlaces
-import Appodeal
 import Appsee
 import TemporaryAlert
 import ChameleonFramework
@@ -26,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let _ = TransportManager.shared
         Appsee.start()
-        
 //        setTheme(FlatNavyBlueDark())
         SVProgressHUD.setBackgroundColor(FlatNavyBlueDark())
         SVProgressHUD.setForegroundColor(FlatWhite())
@@ -35,8 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         GMSServices.provideAPIKey("AIzaSyCVPO88c8l-1EJKZGvHVKw8ypTyXVKo9do")
         GMSPlacesClient.provideAPIKey("AIzaSyCVPO88c8l-1EJKZGvHVKw8ypTyXVKo9do")
-        let adTypes: AppodealAdType = [.interstitial, .banner]
-        Appodeal.initialize(withApiKey: "83e436237a6e67d298ba1da98ee205f363735c2e3bbdee85", types:  adTypes)
+        
+        let _ = CitySettings.shared
         return true
     }
 
@@ -61,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
+        CitySettings.shared.writeToRealm()
         self.saveContext()
     }
 

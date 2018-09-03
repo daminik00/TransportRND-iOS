@@ -1,0 +1,63 @@
+
+/* Class = "UINavigationItem"; title = "Routes"; ObjectID = "76Q-9Y-IjR"; */
+"76Q-9Y-IjR.title" = "Routes";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "8XA-o9-b3N"; */
+"8XA-o9-b3N.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UINavigationItem"; title = "Types"; ObjectID = "Kb4-An-fcD"; */
+"Kb4-An-fcD.title" = "Types";
+
+/* Class = "UIBarButtonItem"; title = "Edit"; ObjectID = "Mz1-Ry-gfy"; */
+"Mz1-Ry-gfy.title" = "Edit";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SRd-7z-kRE"; */
+"SRd-7z-kRE.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Types"; ObjectID = "Z5S-jK-X7M"; */
+"Z5S-jK-X7M.title" = "Types";
+
+/* Class = "UILabel"; text = "Транспорт Ростова"; ObjectID = "cdL-24-bSD"; */
+"cdL-24-bSD.text" = "Транспорт Ростова";
+
+/* Class = "UITabBarItem"; title = "Navigation"; ObjectID = "czr-9K-0wf"; */
+"czr-9K-0wf.title" = "Navigation";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "ei2-xe-Wdu"; */
+"ei2-xe-Wdu.title" = "Item";
+
+/* Class = "UITextView"; text = "Выражаем благодарность МБУ \"Центр ИТС\" за отличную систему сбора координат транспорта.\nhttps://its-rnd.ru/"; ObjectID = "fDL-5U-27C"; */
+"fDL-5U-27C.text" = "Выражаем благодарность МБУ \"Центр ИТС\" за отличную систему сбора координат транспорта.\nhttps://its-rnd.ru/";
+
+/* Class = "UITextField"; placeholder = "До:"; ObjectID = "gSV-6Q-yG5"; */
+"gSV-6Q-yG5.placeholder" = "До:";
+
+/* Class = "UITextField"; placeholder = "От:"; ObjectID = "k1Q-0I-0Zk"; */
+"k1Q-0I-0Zk.placeholder" = "От:";
+
+/* Class = "UIBarButtonItem"; title = "Routes"; ObjectID = "k5b-Xo-IF9"; */
+"k5b-Xo-IF9.title" = "Routes";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "mZ7-yO-bfj"; */
+"mZ7-yO-bfj.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "Navigation"; ObjectID = "nlF-kW-dAD"; */
+"nlF-kW-dAD.title" = "Navigation";
+
+/* Class = "UITabBarItem"; title = "Routes"; ObjectID = "rco-Ue-EIN"; */
+"rco-Ue-EIN.title" = "Routes";
+
+/* Class = "UITextView"; text = "Copyright © 2018 daminik00.dev. All rights reserved."; ObjectID = "v9a-Cp-zBb"; */
+"v9a-Cp-zBb.text" = "Copyright © 2018 daminik00.dev. All rights reserved.";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "w2y-Fl-L61"; */
+"w2y-Fl-L61.title" = "Item";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "wXt-Rj-lDs"; */
+"wXt-Rj-lDs.title" = "Item";
+
+/* Class = "UIBarButtonItem"; title = "Маршрут"; ObjectID = "xHo-mH-7X7"; */
+"xHo-mH-7X7.title" = "Маршрут";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "zbp-rl-rUz"; */
+"zbp-rl-rUz.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";

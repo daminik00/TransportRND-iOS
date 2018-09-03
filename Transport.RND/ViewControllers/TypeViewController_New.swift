@@ -1,8 +1,8 @@
 //
-//  TypeTableViewController.swift
+//  ListViewController_New.swift
 //  Transport.RND
 //
-//  Created by Даниил Чемеркин on 13.03.2018.
+//  Created by Даниил Чемеркин on 13/06/2018.
 //  Copyright © 2018 daminik00.dev. All rights reserved.
 //
 
@@ -13,7 +13,69 @@ import CoreLocation
 import Onboard
 import RealmSwift
 
-class TypeViewController: UIViewController, AppodealInterstitialDelegate, AppodealBannerDelegate {
+
+class TypeEl: Object {
+    @objc dynamic var name = ""
+    var type: CarType? {
+        return CarType(rawValue: name)
+    }
+}
+
+
+class TypeQueue: Object {
+    @objc dynamic var name = ""
+    var queue: List<TypeEl> = List<TypeEl>()
+    
+    var typeQueue: [CarType] {
+        set {
+            queue = List<TypeEl>()
+            for type in newValue {
+                let el = TypeEl()
+                el.name = type.rawValue
+                queue.append(el)
+            }
+        }
+        get {
+            var returnValue = [CarType]()
+            for type in queue {
+                returnValue.append(CarType(rawValue: type.name)!)
+            }
+            return returnValue
+        }
+    }
+    
+    static func get() -> [CarType] {
+        do {
+            let realm = try Realm()
+            guard let types = realm.objects(TypeQueue.self).first else {
+                return [.bus, .minibus, .tram, .trolleybus, .meg, .all]
+            }
+            return types.typeQueue
+        } catch {
+            return [.bus, .minibus, .tram, .trolleybus, .meg, .all]
+        }
+    }
+    
+    static func set(item: TypeQueue) {
+        do {
+            let realm = try Realm()
+            try realm.write {
+                if let types = realm.objects(TypeQueue.self).first {
+                    types.typeQueue = item.typeQueue
+                    realm.add(types)
+                } else {
+                    let forSave = TypeQueue()
+                    forSave.typeQueue = [.bus, .minibus, .tram, .trolleybus, .meg, .all]
+                    realm.add(forSave)
+                }
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+}
+
+class TypeViewControllerNew: UIViewController, AppodealInterstitialDelegate, AppodealBannerDelegate {
     
     @IBOutlet weak var tabeView: UITableView!
     @IBOutlet weak var editButton: UIBarButtonItem!
@@ -27,13 +89,6 @@ class TypeViewController: UIViewController, AppodealInterstitialDelegate, Appode
     var callHeight: CGFloat = 55
     
     override func viewDidLoad() {
-        ////
-        
-//            let a = newCitySettings()
-//            a.writeToRealm()
-        
-        ////
-        
         
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
@@ -100,7 +155,7 @@ class TypeViewController: UIViewController, AppodealInterstitialDelegate, Appode
 
 
 
-extension TypeViewController: UITableViewDelegate, UITableViewDataSource {
+extension TypeViewControllerNew: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.city.type.count
@@ -109,8 +164,6 @@ extension TypeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "catCell") as! CatTableViewCell
         cell.set(indexPath, city, counts)
-        
-        
         return cell
     }
     
@@ -132,7 +185,7 @@ extension TypeViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 
-extension TypeViewController {
+extension TypeViewControllerNew {
     
     @objc func updateData(_ refreshControl: UIRefreshControl) {
         getData(true)
@@ -233,4 +286,3 @@ extension TypeViewController {
         self.tabeView.reloadData()
     }
 }
-

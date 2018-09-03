@@ -58,8 +58,9 @@ class DrawRoute {
                         let start = step.start_location
                         let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: (start?.lat!)!, longitude: (start?.lng!)!))
                         marker.title = name
-                        var tips = "Остановка: \"\((step.transit_details?.departure_stop?.name)!)\""
-                        tips += "\nСадитесь на \(name!) "
+                        
+                        var tips = "\(getNeedText("Остановка","Station")): \"\((step.transit_details?.departure_stop?.name)!)\""
+                        tips += "\n\(getNeedText("Садитесь на", "Take the")) \(name!) "
                         marker.map = self.mapView
                         let path = GMSPath.init(fromEncodedPath: (step.polyline?.points)!)
                         let polyline = GMSPolyline.init(path: path)
@@ -67,7 +68,7 @@ class DrawRoute {
                         switch (step.transit_details?.line?.vehicle?.type)! {
                         case "SHARE_TAXI":
                             polyline.strokeColor = Car.getInfo(type: .minibus).color
-                            tips += "маршрутку"
+                            tips += "\(getNeedText("маршрутку", "minibus"))"
                         case "BUS":
                             let name = step.transit_details?.line?.short_name!
                             if name == "286" || name == "285" {
@@ -75,26 +76,34 @@ class DrawRoute {
                             } else {
                                 polyline.strokeColor = Car.getInfo(type: .bus).color
                             }
-                            tips += "автобус"
+                            tips += "\(getNeedText("автобус", "bus"))"
                         case "TROLLEYBUS":
                             polyline.strokeColor = Car.getInfo(type: .trolleybus).color
-                            tips += "троллейбус"
+                            tips += "\(getNeedText("троллейбус", "trolleybus"))"
                         case "TRAMWAY":
                             polyline.strokeColor = Car.getInfo(type: .tram).color
-                            tips += "трамвай"
+                            tips += "\(getNeedText("трамвай", "tram"))"
                         default:
                             polyline.strokeColor = .black
                             tips += (step.transit_details?.line?.vehicle?.name)!
                         }
-                        tips += "\nВ направление \((step.transit_details?.arrival_stop?.name)!)\n"
-                        tips += "Количество остановок: \((step.transit_details?.num_stops)!)"
+                        tips += "\n\(getNeedText("В направление", "In the direction")) \((step.transit_details?.arrival_stop?.name)!)\n"
+                        tips += "\(getNeedText("Количество остановок", "Number of stops")): \((step.transit_details?.num_stops)!)"
                         marker.snippet = tips
-                        
+                        marker.icon = #imageLiteral(resourceName: "map-imfo-1")
                         polyline.map = self.mapView
                     default: break
                     }
                 }
             }
+        }
+    }
+    
+    func getNeedText(_ ru: String, _ en: String) -> String {
+        if Locale.preferredLanguages[0] == "ru-RU" {
+            return ru
+        } else {
+            return en
         }
     }
     

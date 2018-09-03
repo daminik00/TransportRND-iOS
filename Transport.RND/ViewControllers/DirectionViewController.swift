@@ -43,11 +43,11 @@ class DirectionViewController: TransportViewController, CLLocationManagerDelegat
         }
         
 //        let frame = CGRect(x: 0, y: 0, width: viewMap.frame.width, height: viewMap.frame.height)
-        var height = view.frame.height-64-98-49
+        var height = view.frame.height-64-98-49-46
         let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: height)
         mapView = GMSMapView.map(withFrame: frame, camera: city.camera)
         if UIScreen.main.nativeBounds.height == 2436 {
-            height = view.frame.height-88-98-83
+            height = view.frame.height-88-98-83-46
             mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: 0, width: frame.width, height:height), camera: city.camera)
         }
         
@@ -58,6 +58,8 @@ class DirectionViewController: TransportViewController, CLLocationManagerDelegat
         self.mapView?.settings.compassButton = true
         self.mapView?.settings.zoomGestures = true
         self.viewMap.addSubview(mapView!)
+        
+    
         transport = TransportMap(self)
     }
     
@@ -78,7 +80,6 @@ class DirectionViewController: TransportViewController, CLLocationManagerDelegat
             self.checkUserAddress = true
         }
         isPPVC = false
-        checkCity()
         locationManager.startUpdatingLocation()
     }
     
@@ -111,6 +112,10 @@ class DirectionViewController: TransportViewController, CLLocationManagerDelegat
                         self.startLocation.text = "\(thoroughfare), \(locality), \(administrativeArea), \(country)"
                         guard let postalCode = (firstResult?.postalCode) else { return }
                         self.startLocation.text = "\(thoroughfare), \(locality), \(administrativeArea), \(country), \(postalCode)"
+                        
+                        if self.destinationLocation.text != "" {
+                            self.drawPath(startLocation: self.locationStart, endLocation: self.locationEnd)
+                        }
                     }
                 }
             }
@@ -127,7 +132,7 @@ class DirectionViewController: TransportViewController, CLLocationManagerDelegat
     }
     
     func placePick() {
-        var center = CitySettings(city: .rostov).camera.target
+        var center = CitySettings.shared.camera.target
         if let myLoc = mapView?.myLocation?.coordinate {
             center = myLoc
         }
@@ -142,6 +147,34 @@ class DirectionViewController: TransportViewController, CLLocationManagerDelegat
     }
     
     // MARK: - GMSMapViewDelegate
+    
+    @IBAction func toAirport(_ sender: Any) {
+        if self.startLocation.text != "" {
+            self.drawPath(startLocation: self.locationStart, endLocation: CLLocation(latitude: 47.488453, longitude: 39.929837))
+        }
+        if Locale.preferredLanguages[0] == "ru-RU" {
+            self.destinationLocation.text = "Аэропорт \"Платов\""
+        } else {
+            self.destinationLocation.text = "Airport \"Платов\""
+        }
+        self.locationEnd = CLLocation(latitude: 47.488453, longitude: 39.929837)
+    }
+    
+    
+    @IBAction func toStadium(_ sender: Any) {
+        
+        if self.startLocation.text != "" {
+            self.drawPath(startLocation: self.locationStart, endLocation: CLLocation(latitude: 47.209411, longitude: 39.737442))
+        }
+        if Locale.preferredLanguages[0] == "ru-RU" {
+            self.destinationLocation.text = "Ростов-Арена"
+        } else {
+            self.destinationLocation.text = "Rostov-Arena"
+        }
+        self.locationEnd = CLLocation(latitude: 47.209411, longitude: 39.737442)
+        
+    }
+    
     
     override func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
         super.mapView(mapView, idleAt: position)
@@ -176,26 +209,7 @@ class DirectionViewController: TransportViewController, CLLocationManagerDelegat
         return false
     }
     
-    func checkCity() {
-        do {
-            let fetchRequest: NSFetchRequest<CityData> = CityData.fetchRequest()
-            let cities = try self.context.fetch(fetchRequest)
-            if cities.count > 0 {
-                switch (cities.last?.name)! {
-                case "Ростов":
-                    self.city = CitySettings(city: .rostov)
-                case "Краснодар":
-                    self.city = CitySettings(city: .krasnodar)
-                case "Челябинск":
-                    self.city = CitySettings(city: .chelyabinsk)
-                default:
-                    self.city = CitySettings(city: .rostov)
-                }
-            }
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
+    
     
     
     
@@ -205,7 +219,8 @@ class DirectionViewController: TransportViewController, CLLocationManagerDelegat
         mapView?.clear()
         let origin = "\(startLocation.coordinate.latitude),\(startLocation.coordinate.longitude)"
         let destination = "\(endLocation.coordinate.latitude),\(endLocation.coordinate.longitude)"
-        let urlStr = "https://maps.googleapis.com/maps/api/directions/json?key=AIzaSyAJORpZbPuaktkYFBcMaXgOwMZSrd3WtFY&origin=\(origin)&destination=\(destination)&mode=transit&alternatives=false"
+        var urlStr = "https://maps.googleapis.com/maps/api/directions/json?key=AIzaSyAJORpZbPuaktkYFBcMaXgOwMZSrd3WtFY&origin=\(origin)&destination=\(destination)&mode=transit&alternatives=false"
+
         print(urlStr)
         let url = URL(string: urlStr)!
         URLSession.shared.dataTask(with: url) { (data, response, error) in

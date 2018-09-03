@@ -25,9 +25,6 @@ protocol CameraPositionDelegate {
 
 class TransportViewController: UIViewController, CameraPositionDelegate {
     weak var transport: TransportMap!
-    
-//    var pb = UIProgressView()
-    
     var mapView: GMSMapView?
     var updateFlag = true
     var repeatThis = true
@@ -35,7 +32,7 @@ class TransportViewController: UIViewController, CameraPositionDelegate {
     var cameraPosition: (topLeftLat: Double, topLeftLng: Double, topRightLng: Double, bottomLeftLat: Double)?
     var context: NSManagedObjectContext!
     
-    var city = CitySettings()
+    var city = CitySettings.shared
     var type: CarType? = nil
     var route: String? = nil
     
@@ -66,6 +63,11 @@ class TransportViewController: UIViewController, CameraPositionDelegate {
             transport.stop()
         }
         TransportManager.shared.removeAll()
+    }
+    func updateStart() {
+    }
+    
+    func updateEnd() {
     }
     
     
@@ -103,12 +105,10 @@ extension TransportViewController: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
         self.updateFlag = false
-        print("move start")
     }
     
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
         self.updateFlag = true
-        print("move stop")
     }
     
 }

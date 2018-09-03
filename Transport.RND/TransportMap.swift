@@ -26,6 +26,8 @@ protocol TransportMapDelegate {
     func mapView(_ mapView: GMSMapView, willMove gesture: Bool)
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition)
     
+    func updateStart()
+    func updateEnd()
 }
 
 class TransportMap: NSObject {
@@ -38,7 +40,7 @@ class TransportMap: NSObject {
     fileprivate var type: CarType? = nil
     fileprivate var route: String? = nil
     fileprivate var types = [(route: String, type: CarType, city: City)]()
-    var city = CitySettings()
+    var city = CitySettings.shared
     fileprivate var context: NSManagedObjectContext!
     
     let tList = TransportManager.shared
@@ -98,41 +100,49 @@ class TransportMap: NSObject {
     fileprivate var markersForHand = [Marker]()
     fileprivate func getTransport() {
         if self.delegate.updateFlag {
-            URLSession.shared.dataTask(with: URL(string: (self.city.link))!) { (data, response, error) in
+            self.delegate.updateStart()
+            URLSession.shared.dataTask(with: URL(string: self.city.link)!) { (data, response, error) in
                 if let data = data {
-                    if let info = String(data: data, encoding: .utf8) {
-                        let elements = info.components(separatedBy: .newlines)
-                        for el in elements {
-                            if el != "" {
-                                let markerSettings = MarkerSettings(by: el)
-                                if let route = self.route, let type = self.type {
-                                    if markerSettings.route == route && markerSettings.carType == type {
-                                        self.setTransport(markerSettings)
-                                    }
-                                } else if let type = self.type {
-                                    if type == .all {
-                                        self.setTransport(markerSettings)
-                                    } else if markerSettings.carType == self.type {
-                                        self.setTransport(markerSettings)
-                                    }
-                                } else if self.types.count != 0 {
-                                    if self.types.contains(where: { el -> Bool in
-                                        if markerSettings.carType == el.type && markerSettings.route == el.route {
-                                            return true
-                                        }
-                                        return false
-                                    }) {
-                                        self.setTransport(markerSettings)
-                                    }
-                                }
-                            }
-                        }
-                        self.bounds = false
-                        SVProgressHUD.dismiss()
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                    guard let markerSettingsArray = self.city.provider.markerSettings(data) else {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                             if self.delegate.repeatThis {
                                 self.getTransport()
+                                return
                             }
+                            return
+                        }
+                        return
+                    }
+                    
+                    for markerSettings in markerSettingsArray {
+                        if let route = self.route, let type = self.type {
+                            if markerSettings.route == route && markerSettings.carType == type {
+                                self.setTransport(markerSettings)
+                            }
+                        } else if let type = self.type {
+                            if type == .all {
+                                self.setTransport(markerSettings)
+                            } else if markerSettings.carType == self.type {
+                                self.setTransport(markerSettings)
+                            }
+                        } else if self.types.count != 0 {
+                            if self.types.contains(where: { el -> Bool in
+                                if markerSettings.carType == el.type && markerSettings.route == el.route {
+                                    return true
+                                }
+                                return false
+                            }) {
+                                self.setTransport(markerSettings)
+                            }
+                        }
+                    }
+                    
+                    self.bounds = false
+                    SVProgressHUD.dismiss()
+                    self.delegate.updateEnd()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                        if self.delegate.repeatThis {
+                            self.getTransport()
                         }
                     }
                 } else {
@@ -152,7 +162,7 @@ class TransportMap: NSObject {
         }
     }
     
-    func setTransport(_ newValue: MarkerSettings) {
+    func setTransport(_ newValue: MarkerSettingsData) {
         guard let _ = newValue.lat else { return }
         guard let _ = newValue.lng else { return }
         let checkPosition = Utils.checkPosition(newValue.lat!, lng: newValue.lng!, delegate: self)

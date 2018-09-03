@@ -89,21 +89,41 @@ struct Car {
     
     
     static func getInfo(type: CarType) -> (nameEn: String, nameRu: String, nameRuS: String, color: UIColor, colorB: UIColor, points: String, image: UIImage?) {
-        switch type {
-        case .bus:
-            return (nameEn: "bus", nameRu: "Автобус", nameRuS: "Автобусы", color: UIColor(red:0.86, green:0.19, blue:0.19, alpha:1.0), colorB: UIColor(red:0.86, green:0.19, blue:0.19, alpha:0.6), points: "bus_", image: #imageLiteral(resourceName: "bus"))
-        case .minibus:
-            return (nameEn: "minibus", nameRu: "Маршрутка", nameRuS: "Маршрутки", color: UIColor(red:1.00, green:0.40, blue:0.00, alpha:1.0), colorB: UIColor(red:1.00, green:0.40, blue:0.00, alpha:0.6), points: "minibus_", image: #imageLiteral(resourceName: "minibus"))
-        case .trolleybus:
-            return (nameEn: "trolleybus", nameRu: "Троллейбус", nameRuS: "Троллейбусы", color: UIColor(red:0.00, green:0.45, blue:0.67, alpha:1.0), colorB: UIColor(red:0.00, green:0.45, blue:0.67, alpha:0.6), points: "trol_", image: #imageLiteral(resourceName: "trolleybus"))
-        case .tram:
-            return (nameEn: "tram", nameRu: "Трамвай", nameRuS: "Трамваи", color: UIColor(red:0.00, green:0.60, blue:0.00, alpha:1.0), colorB: UIColor(red:0.00, green:0.60, blue:0.00, alpha:0.6), points: "tram_", image: #imageLiteral(resourceName: "tramway"))
-        case .meg:
-            return (nameEn: "meg", nameRu: "До \"Платова\"", nameRuS: "До аэропорта \"Платов\"", color: .black, colorB: .black, points: "suburbanbus_", image: #imageLiteral(resourceName: "meg"))
-        case .all:
-            return (nameEn: "all", nameRu: "Все", nameRuS: "Все", color: .black, colorB: .black, points: "bus_", image: #imageLiteral(resourceName: "all"))
-        case .fav:
-            return (nameEn: "favorites", nameRu: "Избранные", nameRuS: "Избранные", color: .black, colorB: .black, points: "bus_", image: #imageLiteral(resourceName: "fav"))
+        
+        if Locale.preferredLanguages[0] == "ru-RU" {
+            switch type {
+            case .bus:
+                return (nameEn: "bus", nameRu: "Автобус", nameRuS: "Автобусы", color: UIColor(red:0.86, green:0.19, blue:0.19, alpha:1.0), colorB: UIColor(red:0.86, green:0.19, blue:0.19, alpha:0.6), points: "bus_", image: #imageLiteral(resourceName: "bus"))
+            case .minibus:
+                return (nameEn: "minibus", nameRu: "Маршрутка", nameRuS: "Маршрутки", color: UIColor(red:1.00, green:0.40, blue:0.00, alpha:1.0), colorB: UIColor(red:1.00, green:0.40, blue:0.00, alpha:0.6), points: "minibus_", image: #imageLiteral(resourceName: "minibus"))
+            case .trolleybus:
+                return (nameEn: "trolleybus", nameRu: "Троллейбус", nameRuS: "Троллейбусы", color: UIColor(red:0.00, green:0.45, blue:0.67, alpha:1.0), colorB: UIColor(red:0.00, green:0.45, blue:0.67, alpha:0.6), points: "trol_", image: #imageLiteral(resourceName: "trolleybus"))
+            case .tram:
+                return (nameEn: "tram", nameRu: "Трамвай", nameRuS: "Трамваи", color: UIColor(red:0.00, green:0.60, blue:0.00, alpha:1.0), colorB: UIColor(red:0.00, green:0.60, blue:0.00, alpha:0.6), points: "tram_", image: #imageLiteral(resourceName: "tramway"))
+            case .meg:
+                return (nameEn: "meg", nameRu: "До \"Платова\"", nameRuS: "До аэропорта \"Платов\"", color: .black, colorB: .black, points: "suburbanbus_", image: #imageLiteral(resourceName: "meg"))
+            case .all:
+                return (nameEn: "all", nameRu: "Все", nameRuS: "Все", color: .black, colorB: .black, points: "bus_", image: #imageLiteral(resourceName: "all"))
+            case .fav:
+                return (nameEn: "favorites", nameRu: "Избранные", nameRuS: "Избранные", color: .black, colorB: .black, points: "bus_", image: #imageLiteral(resourceName: "fav"))
+            }
+        } else {
+            switch type {
+            case .bus:
+                return (nameEn: "bus", nameRu: "Bus", nameRuS: "Buses", color: UIColor(red:0.86, green:0.19, blue:0.19, alpha:1.0), colorB: UIColor(red:0.86, green:0.19, blue:0.19, alpha:0.6), points: "bus_", image: #imageLiteral(resourceName: "bus"))
+            case .minibus:
+                return (nameEn: "minibus", nameRu: "Minibus", nameRuS: "Minibuses", color: UIColor(red:1.00, green:0.40, blue:0.00, alpha:1.0), colorB: UIColor(red:1.00, green:0.40, blue:0.00, alpha:0.6), points: "minibus_", image: #imageLiteral(resourceName: "minibus"))
+            case .trolleybus:
+                return (nameEn: "trolleybus", nameRu: "Trolleybus", nameRuS: "Trolleybuses", color: UIColor(red:0.00, green:0.45, blue:0.67, alpha:1.0), colorB: UIColor(red:0.00, green:0.45, blue:0.67, alpha:0.6), points: "trol_", image: #imageLiteral(resourceName: "trolleybus"))
+            case .tram:
+                return (nameEn: "tram", nameRu: "Tram", nameRuS: "Trams", color: UIColor(red:0.00, green:0.60, blue:0.00, alpha:1.0), colorB: UIColor(red:0.00, green:0.60, blue:0.00, alpha:0.6), points: "tram_", image: #imageLiteral(resourceName: "tramway"))
+            case .meg:
+                return (nameEn: "meg", nameRu: "To Airport", nameRuS: "To Airport \"Platov\"", color: .black, colorB: .black, points: "suburbanbus_", image: #imageLiteral(resourceName: "meg"))
+            case .all:
+                return (nameEn: "all", nameRu: "All", nameRuS: "All", color: .black, colorB: .black, points: "bus_", image: #imageLiteral(resourceName: "all"))
+            case .fav:
+                return (nameEn: "favorites", nameRu: "Featured", nameRuS: "Featured", color: .black, colorB: .black, points: "bus_", image: #imageLiteral(resourceName: "fav"))
+            }
         }
     }
     

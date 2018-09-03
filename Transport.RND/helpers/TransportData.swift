@@ -12,7 +12,7 @@ import CoreData
 import UIKit
 
 class TransportData {
-    var city = CitySettings()
+    var city = CitySettings.shared
     var type = [CarType]()
     var route = [String]()
     var directions: Directions?

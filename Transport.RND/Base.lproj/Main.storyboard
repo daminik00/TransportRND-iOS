@@ -6,14 +6,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="ha7-tW-bAj">
             <objects>
-                <viewController id="EoX-XM-fVn" sceneMemberID="viewController">
+                <viewController id="EoX-XM-fVn" customClass="InfoViewController" customModule="Transport_RND" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6wd-T6-dsU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,11 +44,25 @@ https://its-rnd.ru/</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5L-e1-C0a">
+                                <rect key="frame" x="0.0" y="450" width="375" height="46"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="IB7-S1-FOb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
+                                <state key="normal" title="Выбрать город"/>
+                                <connections>
+                                    <action selector="checkCity:" destination="EoX-XM-fVn" eventType="touchUpInside" id="5yi-5D-Rsh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="p5L-e1-C0a" firstAttribute="leading" secondItem="eL1-1N-dwq" secondAttribute="leading" id="1Th-yB-v0U"/>
                             <constraint firstItem="fDL-5U-27C" firstAttribute="leading" secondItem="eL1-1N-dwq" secondAttribute="leading" constant="40" id="Fmm-z4-zkX"/>
+                            <constraint firstItem="p5L-e1-C0a" firstAttribute="top" secondItem="fDL-5U-27C" secondAttribute="bottom" constant="221.5" id="JBA-RY-VHg"/>
                             <constraint firstItem="v9a-Cp-zBb" firstAttribute="trailing" secondItem="eL1-1N-dwq" secondAttribute="trailing" id="Lpr-cc-p0L"/>
                             <constraint firstItem="cdL-24-bSD" firstAttribute="leading" secondItem="eL1-1N-dwq" secondAttribute="leading" constant="28" id="PmT-a2-0uC"/>
                             <constraint firstItem="cdL-24-bSD" firstAttribute="top" secondItem="eL1-1N-dwq" secondAttribute="top" constant="44" id="Rvr-h9-Hs3"/>
@@ -56,6 +71,7 @@ https://its-rnd.ru/</string>
                             <constraint firstItem="v9a-Cp-zBb" firstAttribute="leading" secondItem="eL1-1N-dwq" secondAttribute="leading" id="dFy-Ni-3qN"/>
                             <constraint firstItem="v9a-Cp-zBb" firstAttribute="bottom" secondItem="eL1-1N-dwq" secondAttribute="bottom" id="kMr-68-sTj"/>
                             <constraint firstItem="eL1-1N-dwq" firstAttribute="trailing" secondItem="cdL-24-bSD" secondAttribute="trailing" constant="27" id="slS-8Q-anG"/>
+                            <constraint firstItem="eL1-1N-dwq" firstAttribute="trailing" secondItem="p5L-e1-C0a" secondAttribute="trailing" id="wsP-gq-4st"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eL1-1N-dwq"/>
                     </view>
@@ -64,7 +80,7 @@ https://its-rnd.ru/</string>
             </objects>
             <point key="canvasLocation" x="-3281" y="3313"/>
         </scene>
-        <!--Категория-->
+        <!--Types-->
         <scene sceneID="7XS-CX-7se">
             <objects>
                 <viewController id="rMX-KP-ZxV" customClass="TypeViewController" customModule="Transport_RND" customModuleProvider="target" sceneMemberID="viewController">
@@ -148,8 +164,8 @@ https://its-rnd.ru/</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bo9-Fj-dcT"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Категория" image="albums" id="Z5S-jK-X7M"/>
-                    <navigationItem key="navigationItem" title="Категория" id="Kb4-An-fcD">
+                    <tabBarItem key="tabBarItem" title="Types" image="albums" id="Z5S-jK-X7M"/>
+                    <navigationItem key="navigationItem" title="Types" id="Kb4-An-fcD">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="info" id="w2y-Fl-L61">
                             <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -173,16 +189,16 @@ https://its-rnd.ru/</string>
             </objects>
             <point key="canvasLocation" x="-2728.125" y="2485.5633802816901"/>
         </scene>
-        <!--Item-->
+        <!--Navigation-->
         <scene sceneID="KI4-sZ-cf6">
             <objects>
                 <navigationController id="kmM-I2-aQ2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="mZ7-yO-bfj"/>
+                    <tabBarItem key="tabBarItem" title="Navigation" image="navigation" id="mZ7-yO-bfj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q41-5k-R0X">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.15868747234344482" green="0.21822044253349304" blue="0.30320093035697937" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.15686274509803921" green="0.2196078431372549" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
@@ -191,7 +207,7 @@ https://its-rnd.ru/</string>
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="k8E-Re-7KP" kind="relationship" relationship="rootViewController" id="LXw-fe-TUd"/>
+                        <segue destination="gNb-7U-000" kind="relationship" relationship="rootViewController" id="bqY-BQ-Hrz"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sMa-bd-Mpo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -291,7 +307,7 @@ https://its-rnd.ru/</string>
             </objects>
             <point key="canvasLocation" x="-2186" y="3313"/>
         </scene>
-        <!--Маршруты-->
+        <!--Routes-->
         <scene sceneID="2jV-lH-DFV">
             <objects>
                 <viewController id="wrG-5D-rt7" customClass="ListViewController" customModule="Transport_RND" customModuleProvider="target" sceneMemberID="viewController">
@@ -408,9 +424,9 @@ https://its-rnd.ru/</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="J3r-iv-YfI"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Маршруты" image="route" id="rco-Ue-EIN"/>
-                    <navigationItem key="navigationItem" title="Маршруты" id="76Q-9Y-IjR">
-                        <barButtonItem key="backBarButtonItem" title="Список" id="k5b-Xo-IF9"/>
+                    <tabBarItem key="tabBarItem" title="Routes" image="route" id="rco-Ue-EIN"/>
+                    <navigationItem key="navigationItem" title="Routes" id="76Q-9Y-IjR">
+                        <barButtonItem key="backBarButtonItem" title="Routes" id="k5b-Xo-IF9"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="hPy-Wm-Ith" id="UET-tI-2LR"/>
@@ -421,7 +437,7 @@ https://its-rnd.ru/</string>
             </objects>
             <point key="canvasLocation" x="-1658.4000000000001" y="2485.9070464767619"/>
         </scene>
-        <!--Навигация-->
+        <!--Navigation-->
         <scene sceneID="6R8-hr-QP1">
             <objects>
                 <viewController id="k8E-Re-7KP" customClass="DirectionViewController" customModule="Transport_RND" customModuleProvider="target" sceneMemberID="viewController">
@@ -434,9 +450,9 @@ https://its-rnd.ru/</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzR-ar-T25" userLabel="AB">
-                                <rect key="frame" x="0.0" y="520" width="375" height="98"/>
+                                <rect key="frame" x="0.0" y="569" width="375" height="98"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="До:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gSV-6Q-yG5">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gSV-6Q-yG5">
                                         <rect key="frame" x="20" y="53" width="335" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="qPR-ag-2WD"/>
@@ -454,7 +470,7 @@ https://its-rnd.ru/</string>
                                             <action selector="openDestinationLocation:" destination="k8E-Re-7KP" eventType="touchUpInside" id="krB-67-puO"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="От:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k1Q-0I-0Zk">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="From:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k1Q-0I-0Zk">
                                         <rect key="frame" x="20" y="10" width="335" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="sI6-bL-2hS"/>
@@ -491,24 +507,50 @@ https://its-rnd.ru/</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BkR-3C-Qee">
-                                <rect key="frame" x="0.0" y="64" width="375" height="456"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="503"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buk-N5-LEN">
+                                <rect key="frame" x="0.0" y="523" width="187.5" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="kNx-ny-nL7"/>
+                                </constraints>
+                                <state key="normal" title="To Airport"/>
+                                <connections>
+                                    <action selector="toAirport:" destination="k8E-Re-7KP" eventType="touchUpInside" id="mbK-ze-WcU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ha4-N1-jh0">
+                                <rect key="frame" x="187.5" y="523" width="187.5" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="sZR-yf-dfC"/>
+                                </constraints>
+                                <state key="normal" title="To Stadium"/>
+                                <connections>
+                                    <action selector="toStadium:" destination="k8E-Re-7KP" eventType="touchUpInside" id="XQ8-u3-xC5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="pzR-ar-T25" firstAttribute="top" secondItem="buk-N5-LEN" secondAttribute="bottom" id="8iB-Fa-1Rd"/>
                             <constraint firstItem="BkR-3C-Qee" firstAttribute="leading" secondItem="Dmn-L2-7fF" secondAttribute="leading" id="GDy-cq-hfi"/>
+                            <constraint firstItem="buk-N5-LEN" firstAttribute="leading" secondItem="Dmn-L2-7fF" secondAttribute="leading" id="Kpp-BX-SCQ"/>
+                            <constraint firstItem="buk-N5-LEN" firstAttribute="top" secondItem="BkR-3C-Qee" secondAttribute="bottom" id="LcW-Ey-uQu"/>
                             <constraint firstItem="pzR-ar-T25" firstAttribute="leading" secondItem="Dmn-L2-7fF" secondAttribute="leading" id="NnN-yl-PlC"/>
+                            <constraint firstItem="Ha4-N1-jh0" firstAttribute="width" secondItem="iLc-Kr-i8j" secondAttribute="width" multiplier="0.5" id="ODB-GJ-h0C"/>
                             <constraint firstItem="BkR-3C-Qee" firstAttribute="top" secondItem="X0A-LM-tW6" secondAttribute="bottom" id="Shz-2t-xyL"/>
+                            <constraint firstItem="Ha4-N1-jh0" firstAttribute="trailing" secondItem="Dmn-L2-7fF" secondAttribute="trailing" id="fVu-sd-lZ1"/>
+                            <constraint firstItem="Ha4-N1-jh0" firstAttribute="leading" secondItem="buk-N5-LEN" secondAttribute="trailing" id="mKk-je-OrV"/>
                             <constraint firstItem="pzR-ar-T25" firstAttribute="trailing" secondItem="Dmn-L2-7fF" secondAttribute="trailing" id="mkj-Gq-xnI"/>
                             <constraint firstItem="BkR-3C-Qee" firstAttribute="trailing" secondItem="Dmn-L2-7fF" secondAttribute="trailing" id="nFX-yf-5Pj"/>
-                            <constraint firstItem="Dmn-L2-7fF" firstAttribute="bottom" secondItem="BkR-3C-Qee" secondAttribute="bottom" constant="98" id="oN6-If-JG9"/>
                             <constraint firstItem="nNq-OX-Jie" firstAttribute="top" secondItem="pzR-ar-T25" secondAttribute="bottom" id="qoJ-IU-YdB"/>
+                            <constraint firstItem="pzR-ar-T25" firstAttribute="top" secondItem="Ha4-N1-jh0" secondAttribute="bottom" id="tT1-fo-Ta6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dmn-L2-7fF"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Навигация" image="navigation" id="czr-9K-0wf"/>
-                    <navigationItem key="navigationItem" title="Навигация" id="nlF-kW-dAD">
+                    <tabBarItem key="tabBarItem" title="Navigation" image="navigation" id="czr-9K-0wf"/>
+                    <navigationItem key="navigationItem" title="Navigation" id="nlF-kW-dAD">
                         <barButtonItem key="backBarButtonItem" title="Маршрут" id="xHo-mH-7X7"/>
                     </navigationItem>
                     <connections>
@@ -519,7 +561,23 @@ https://its-rnd.ru/</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JCd-gn-8Ma" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-509.60000000000002" y="2485.0074962518743"/>
+            <point key="canvasLocation" x="446" y="1663"/>
+        </scene>
+        <!--Navigation-->
+        <scene sceneID="h63-gt-3WB">
+            <objects>
+                <viewController title="Navigation" id="gNb-7U-000" customClass="NavigationViewController" customModule="Transport_RND" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mYr-pc-1d8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="h8r-8b-3hj"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Navigation" id="G8G-Sz-A0N"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CXJ-we-QK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-508" y="2485"/>
         </scene>
         <!--Item-->
         <scene sceneID="Lw0-YB-NLD">
@@ -545,6 +603,13 @@ https://its-rnd.ru/</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tzQ-Ay-XWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2727" y="1663"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="Lc6-Zy-MhD">
+            <objects>
+                <viewControllerPlaceholder id="t1B-mQ-Xz6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h2h-cr-1El" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

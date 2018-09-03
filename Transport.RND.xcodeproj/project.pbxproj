@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		50B03A09F0C4FF8B3AF065AF /* Pods_Transport_RND.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82C3D77AB9D713D58627291 /* Pods_Transport_RND.framework */; };
+		BF03A3A420DA30D300CDEDCA /* Shade.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03A3A320DA30D300CDEDCA /* Shade.swift */; };
 		BF041A112099C99F009EBEE3 /* TransportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF041A102099C99F009EBEE3 /* TransportManager.swift */; };
+		BF08D5AB20DF892B00D4DF3E /* Transport_RNDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08D5AA20DF892B00D4DF3E /* Transport_RNDUITests.swift */; };
 		BF1111062089EA2900687D98 /* TransportMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1111052089EA2900687D98 /* TransportMap.swift */; };
 		BF111108208BC61A00687D98 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF111107208BC61A00687D98 /* InfoView.swift */; };
 		BF11110A208C6F5700687D98 /* TransportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF111109208C6F5700687D98 /* TransportViewController.swift */; };
 		BF11110C208C892800687D98 /* TransportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11110B208C892800687D98 /* TransportData.swift */; };
+		BF1DB61420DAD10E00E69C60 /* CSVRKCProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DB61320DAD10E00E69C60 /* CSVRKCProvider.swift */; };
 		BF3F6B942056907F002D70B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3F6B932056907F002D70B3 /* AppDelegate.swift */; };
 		BF3F6B9C2056907F002D70B3 /* Transport_RND.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF3F6B9A2056907F002D70B3 /* Transport_RND.xcdatamodeld */; };
 		BF3F6BAE20569146002D70B3 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3F6BAA20569146002D70B3 /* ListViewController.swift */; };
@@ -52,11 +55,14 @@
 		BF63385A2060343E008B1906 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6338592060343E008B1906 /* CustomTableViewCell.swift */; };
 		BF63385C2061CC11008B1906 /* Markers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63385B2061CC11008B1906 /* Markers.swift */; };
 		BF63385E2061CCED008B1906 /* CatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63385D2061CCED008B1906 /* CatTableViewCell.swift */; };
+		BF70680E20D1015800D38A53 /* TypeViewController_New.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70680D20D1015800D38A53 /* TypeViewController_New.swift */; };
 		BF8A280020A1CBB500E17A40 /* SwiftyOnboardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A27FC20A1CBB400E17A40 /* SwiftyOnboardPage.swift */; };
 		BF8A280120A1CBB500E17A40 /* SwiftyOnboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A27FD20A1CBB400E17A40 /* SwiftyOnboard.swift */; };
 		BF8A280220A1CBB500E17A40 /* SwiftyOnboardOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A27FF20A1CBB400E17A40 /* SwiftyOnboardOverlay.swift */; };
 		BF8A280A20A2D01C00E17A40 /* Background.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF8A280920A2D01C00E17A40 /* Background.xcassets */; };
 		BF8A281020A3A22000E17A40 /* onFav.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF8A280F20A3A22000E17A40 /* onFav.gif */; };
+		BF8A636120E158CC008A0AF0 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A636020E158CC008A0AF0 /* NavigationViewController.swift */; };
+		BF93E7AA20D583A70025537E /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF93E7A920D583A70025537E /* InfoViewController.swift */; };
 		BFA5B96720A0D38D00E6E291 /* RoutesGov.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA5B96620A0D38D00E6E291 /* RoutesGov.swift */; };
 		BFA64C5A209EDAD700B8B7CC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA64C59209EDAD700B8B7CC /* Utils.swift */; };
 		BFBA20D6208341E000874D8D /* stops.json in Resources */ = {isa = PBXBuildFile; fileRef = BFBA20D5208341E000874D8D /* stops.json */; };
@@ -64,17 +70,37 @@
 		BFBA20DB2083444000874D8D /* StopsControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA20DA2083444000874D8D /* StopsControll.swift */; };
 		BFE16B4220570BE00075E29F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE16B4120570BE00075E29F /* Assets.xcassets */; };
 		BFE63F372059BD1600377207 /* TypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE63F362059BD1600377207 /* TypeViewController.swift */; };
+		BFEB693020D7AED20096458C /* RostovFusionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEB692F20D7AED20096458C /* RostovFusionProvider.swift */; };
 		BFF602FA20A15D0C00395D98 /* OnBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF602F920A15D0C00395D98 /* OnBoardViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF08D5AD20DF892B00D4DF3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF3F6B882056907F002D70B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF3F6B8F2056907F002D70B3;
+			remoteInfo = Transport.RND;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		00BEA66E89A12AB0DE242428 /* Pods-Transport.RND.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transport.RND.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Transport.RND/Pods-Transport.RND.debug.xcconfig"; sourceTree = "<group>"; };
 		240AF2CDA8F5A5C331DAD698 /* Pods-Transport.RND.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transport.RND.release.xcconfig"; path = "Pods/Target Support Files/Pods-Transport.RND/Pods-Transport.RND.release.xcconfig"; sourceTree = "<group>"; };
+		BF03A3A320DA30D300CDEDCA /* Shade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shade.swift; sourceTree = "<group>"; };
 		BF041A102099C99F009EBEE3 /* TransportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransportManager.swift; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/TransportManager.swift"; sourceTree = "<group>"; };
+		BF08D5A820DF892B00D4DF3E /* Transport.RNDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Transport.RNDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF08D5AA20DF892B00D4DF3E /* Transport_RNDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transport_RNDUITests.swift; sourceTree = "<group>"; };
+		BF08D5AC20DF892B00D4DF3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF0D35CD20D277E400B0FD03 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		BF0D35CE20D277E400B0FD03 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		BF0D35CF20D2792C00B0FD03 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
+		BF0D35D020D2792C00B0FD03 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		BF1111052089EA2900687D98 /* TransportMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportMap.swift; sourceTree = "<group>"; };
 		BF111107208BC61A00687D98 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		BF111109208C6F5700687D98 /* TransportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportViewController.swift; sourceTree = "<group>"; };
 		BF11110B208C892800687D98 /* TransportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportData.swift; sourceTree = "<group>"; };
+		BF1DB61320DAD10E00E69C60 /* CSVRKCProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVRKCProvider.swift; sourceTree = "<group>"; };
 		BF3F6B902056907F002D70B3 /* Transport.RND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transport.RND.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3F6B932056907F002D70B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF3F6B9B2056907F002D70B3 /* Transport_RND.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Transport_RND.xcdatamodel; sourceTree = "<group>"; };
@@ -116,12 +142,15 @@
 		BF6338592060343E008B1906 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		BF63385B2061CC11008B1906 /* Markers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Markers.swift; sourceTree = "<group>"; };
 		BF63385D2061CCED008B1906 /* CatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatTableViewCell.swift; sourceTree = "<group>"; };
+		BF70680D20D1015800D38A53 /* TypeViewController_New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeViewController_New.swift; sourceTree = "<group>"; };
 		BF8A27FC20A1CBB400E17A40 /* SwiftyOnboardPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyOnboardPage.swift; sourceTree = "<group>"; };
 		BF8A27FD20A1CBB400E17A40 /* SwiftyOnboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyOnboard.swift; sourceTree = "<group>"; };
 		BF8A27FE20A1CBB400E17A40 /* SwiftyOnboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyOnboard.h; sourceTree = "<group>"; };
 		BF8A27FF20A1CBB400E17A40 /* SwiftyOnboardOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyOnboardOverlay.swift; sourceTree = "<group>"; };
 		BF8A280920A2D01C00E17A40 /* Background.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Background.xcassets; sourceTree = "<group>"; };
 		BF8A280F20A3A22000E17A40 /* onFav.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = onFav.gif; sourceTree = "<group>"; };
+		BF8A636020E158CC008A0AF0 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		BF93E7A920D583A70025537E /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		BFA5B96620A0D38D00E6E291 /* RoutesGov.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesGov.swift; sourceTree = "<group>"; };
 		BFA64C59209EDAD700B8B7CC /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		BFBA20D12083349F00874D8D /* Transport.RND.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Transport.RND.entitlements; sourceTree = "<group>"; };
@@ -130,11 +159,19 @@
 		BFBA20DA2083444000874D8D /* StopsControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopsControll.swift; sourceTree = "<group>"; };
 		BFE16B4120570BE00075E29F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFE63F362059BD1600377207 /* TypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeViewController.swift; sourceTree = "<group>"; };
+		BFEB692F20D7AED20096458C /* RostovFusionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RostovFusionProvider.swift; sourceTree = "<group>"; };
 		BFF602F920A15D0C00395D98 /* OnBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardViewController.swift; sourceTree = "<group>"; };
 		F82C3D77AB9D713D58627291 /* Pods_Transport_RND.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transport_RND.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BF08D5A520DF892B00D4DF3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF3F6B8D2056907F002D70B3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,10 +200,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BF08D5A920DF892B00D4DF3E /* Transport.RNDUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BF08D5AA20DF892B00D4DF3E /* Transport_RNDUITests.swift */,
+				BF08D5AC20DF892B00D4DF3E /* Info.plist */,
+			);
+			path = Transport.RNDUITests;
+			sourceTree = "<group>";
+		};
+		BF1DB61220DAD0B500E69C60 /* CityDataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				BFEB692F20D7AED20096458C /* RostovFusionProvider.swift */,
+				BF1DB61320DAD10E00E69C60 /* CSVRKCProvider.swift */,
+			);
+			path = CityDataProvider;
+			sourceTree = "<group>";
+		};
 		BF3F6B872056907F002D70B3 = {
 			isa = PBXGroup;
 			children = (
 				BF3F6B922056907F002D70B3 /* Transport.RND */,
+				BF08D5A920DF892B00D4DF3E /* Transport.RNDUITests */,
 				BF3F6B912056907F002D70B3 /* Products */,
 				73DCB71A445E2631083E216F /* Pods */,
 				33F07BB831B779EA1D787163 /* Frameworks */,
@@ -177,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				BF3F6B902056907F002D70B3 /* Transport.RND.app */,
+				BF08D5A820DF892B00D4DF3E /* Transport.RNDUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,6 +241,7 @@
 		BF3F6B922056907F002D70B3 /* Transport.RND */ = {
 			isa = PBXGroup;
 			children = (
+				BF1DB61220DAD0B500E69C60 /* CityDataProvider */,
 				BF3F6B932056907F002D70B3 /* AppDelegate.swift */,
 				BF1111052089EA2900687D98 /* TransportMap.swift */,
 				BF041A102099C99F009EBEE3 /* TransportManager.swift */,
@@ -263,6 +321,9 @@
 				BF3F6BAC20569146002D70B3 /* MapViewController.swift */,
 				BF111109208C6F5700687D98 /* TransportViewController.swift */,
 				BFF602F920A15D0C00395D98 /* OnBoardViewController.swift */,
+				BF70680D20D1015800D38A53 /* TypeViewController_New.swift */,
+				BF93E7A920D583A70025537E /* InfoViewController.swift */,
+				BF8A636020E158CC008A0AF0 /* NavigationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -276,6 +337,7 @@
 				BF63385D2061CCED008B1906 /* CatTableViewCell.swift */,
 				BF111107208BC61A00687D98 /* InfoView.swift */,
 				BF5387F7209DCD02009B9C49 /* MarkerView.swift */,
+				BF03A3A320DA30D300CDEDCA /* Shade.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -307,6 +369,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BF08D5A720DF892B00D4DF3E /* Transport.RNDUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF08D5B120DF892B00D4DF3E /* Build configuration list for PBXNativeTarget "Transport.RNDUITests" */;
+			buildPhases = (
+				BF08D5A420DF892B00D4DF3E /* Sources */,
+				BF08D5A520DF892B00D4DF3E /* Frameworks */,
+				BF08D5A620DF892B00D4DF3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF08D5AE20DF892B00D4DF3E /* PBXTargetDependency */,
+			);
+			name = Transport.RNDUITests;
+			productName = Transport.RNDUITests;
+			productReference = BF08D5A820DF892B00D4DF3E /* Transport.RNDUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		BF3F6B8F2056907F002D70B3 /* Transport.RND */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF3F6BA52056907F002D70B3 /* Build configuration list for PBXNativeTarget "Transport.RND" */;
@@ -333,10 +413,15 @@
 		BF3F6B882056907F002D70B3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = daminik00.dev;
 				TargetAttributes = {
+					BF08D5A720DF892B00D4DF3E = {
+						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BF3F6B8F2056907F002D70B3;
+					};
 					BF3F6B8F2056907F002D70B3 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -362,11 +447,19 @@
 			projectRoot = "";
 			targets = (
 				BF3F6B8F2056907F002D70B3 /* Transport.RND */,
+				BF08D5A720DF892B00D4DF3E /* Transport.RNDUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BF08D5A620DF892B00D4DF3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF3F6B8E2056907F002D70B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -482,7 +575,10 @@
 				"${BUILT_PRODUCTS_DIR}/GooglePlacesAPI/GooglePlacesAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/TemporaryAlert/TemporaryAlert.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -492,7 +588,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GooglePlacesAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TemporaryAlert.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +602,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BF08D5A420DF892B00D4DF3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF08D5AB20DF892B00D4DF3E /* Transport_RNDUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF3F6B8C2056907F002D70B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -524,14 +631,17 @@
 				BF111108208BC61A00687D98 /* InfoView.swift in Sources */,
 				BF6338532060337E008B1906 /* Routes.swift in Sources */,
 				BF6338472060337E008B1906 /* Vehicle.swift in Sources */,
+				BFEB693020D7AED20096458C /* RostovFusionProvider.swift in Sources */,
 				BF3F6BB020569146002D70B3 /* MapViewController.swift in Sources */,
 				BF63384A2060337E008B1906 /* Geocoded_waypoints.swift in Sources */,
 				BFE63F372059BD1600377207 /* TypeViewController.swift in Sources */,
 				BF63384E2060337E008B1906 /* Departure_time.swift in Sources */,
 				BF6338452060337E008B1906 /* Start_location.swift in Sources */,
+				BF93E7AA20D583A70025537E /* InfoViewController.swift in Sources */,
 				BF6338412060337E008B1906 /* Transit_details.swift in Sources */,
 				BF63385E2061CCED008B1906 /* CatTableViewCell.swift in Sources */,
 				BFA64C5A209EDAD700B8B7CC /* Utils.swift in Sources */,
+				BF70680E20D1015800D38A53 /* TypeViewController_New.swift in Sources */,
 				BF633856206033ED008B1906 /* DirectionViewController.swift in Sources */,
 				BF8A280220A1CBB500E17A40 /* SwiftyOnboardOverlay.swift in Sources */,
 				BF63383E2060337E008B1906 /* Location.swift in Sources */,
@@ -544,6 +654,7 @@
 				BF5387F8209DCD02009B9C49 /* MarkerView.swift in Sources */,
 				BF6338512060337E008B1906 /* Polyline.swift in Sources */,
 				BF3F6B942056907F002D70B3 /* AppDelegate.swift in Sources */,
+				BF8A636120E158CC008A0AF0 /* NavigationViewController.swift in Sources */,
 				BF6338422060337E008B1906 /* Bounds.swift in Sources */,
 				BF3F6BAF20569146002D70B3 /* TriangleView.swift in Sources */,
 				BF6338432060337E008B1906 /* Northeast.swift in Sources */,
@@ -553,6 +664,8 @@
 				BF6338522060337E008B1906 /* Southwest.swift in Sources */,
 				BF63383F2060337E008B1906 /* Legs.swift in Sources */,
 				BF63385A2060343E008B1906 /* CustomTableViewCell.swift in Sources */,
+				BF03A3A420DA30D300CDEDCA /* Shade.swift in Sources */,
+				BF1DB61420DAD10E00E69C60 /* CSVRKCProvider.swift in Sources */,
 				BF6338582060340C008B1906 /* DrawRoute.swift in Sources */,
 				BF63383D2060337E008B1906 /* Directions.swift in Sources */,
 				BF1111062089EA2900687D98 /* TransportMap.swift in Sources */,
@@ -562,11 +675,21 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BF08D5AE20DF892B00D4DF3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF3F6B8F2056907F002D70B3 /* Transport.RND */;
+			targetProxy = BF08D5AD20DF892B00D4DF3E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		BF521D482059BB6200BA7FCB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BF521D492059BB6200BA7FCB /* Base */,
+				BF0D35CE20D277E400B0FD03 /* ru */,
+				BF0D35D020D2792C00B0FD03 /* en-GB */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -575,6 +698,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				BF521D4B2059BB6200BA7FCB /* Base */,
+				BF0D35CD20D277E400B0FD03 /* ru */,
+				BF0D35CF20D2792C00B0FD03 /* en-GB */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -582,10 +707,45 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BF08D5AF20DF892B00D4DF3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4X4HAH2D2G;
+				INFOPLIST_FILE = Transport.RNDUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.daminik00.Transport-RNDUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Transport.RND;
+			};
+			name = Debug;
+		};
+		BF08D5B020DF892B00D4DF3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4X4HAH2D2G;
+				INFOPLIST_FILE = Transport.RNDUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.daminik00.Transport-RNDUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Transport.RND;
+			};
+			name = Release;
+		};
 		BF3F6BA32056907F002D70B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -645,6 +805,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -730,6 +891,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BF08D5B120DF892B00D4DF3E /* Build configuration list for PBXNativeTarget "Transport.RNDUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF08D5AF20DF892B00D4DF3E /* Debug */,
+				BF08D5B020DF892B00D4DF3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BF3F6B8B2056907F002D70B3 /* Build configuration list for PBXProject "Transport.RND" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

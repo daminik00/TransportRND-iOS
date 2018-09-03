@@ -10,15 +10,12 @@ import Foundation
 import GoogleMaps
 
 class Marker: GMSMarker {
-    
     override var hashValue: Int {
         return (number?.hashValue)!
     }
-    
     static func == (lhs: Marker, rhs: Marker) -> Bool {
         return lhs.hashValue == rhs.hashValue
     }
-    
     var route: String?
     var number: String?
     var degrees: CLLocationDegrees?
@@ -30,7 +27,7 @@ class Marker: GMSMarker {
     var lat: Double?
     var lng: Double?
     
-    
+    var primaryKey: String?
     var carType: CarType!
     
     var newPosition: CLLocationCoordinate2D {
@@ -45,7 +42,7 @@ class Marker: GMSMarker {
     
     override private init() {}
     
-    init(by settings: MarkerSettings) {
+    init(by settings: MarkerSettingsData) {
         super.init()
         route = settings.route
         number = settings.number
@@ -54,6 +51,7 @@ class Marker: GMSMarker {
         speed = settings.speed
         lat = settings.lat
         lng = settings.lng
+        primaryKey = settings.primaryKey
         self.position = CLLocationCoordinate2D(latitude: lat!, longitude: lng!)
         DispatchQueue.main.async {
             self.setMarker(type: self.carType, route: self.route, speed: self.speed, number: self.number)
@@ -82,7 +80,13 @@ class Marker: GMSMarker {
         if let speed = self.speed {
             var json = ""
             if let number = self.number {
-                json += "{\"number\": \"Гос. Номер: \(number)\","
+                if number == "" || number == " " {
+                    if let primaryKey = self.primaryKey {
+                        json += "{\"number\": \"Гос. Номер: \(primaryKey)\","
+                    }
+                } else {
+                    json += "{\"number\": \"Гос. Номер: \(number)\","
+                }
             }
             if let route = self.route {
                 json += "\"route\": \"\(route)\","
@@ -126,9 +130,27 @@ class Marker: GMSMarker {
     
 }
 
+protocol MarkerSettingsData {
+    var route: String? { get set }
+    var number: String? { get set }
+    var degrees: CLLocationDegrees? { get set }
+    var speed: Int? { get set }
+    var lat: Double? { get set }
+    var lng: Double? { get set }
+    var carType: CarType! { get set }
+    var marker: Marker { get }
+    
+    var primaryKey: String? { get }
+}
 
+extension MarkerSettingsData {
+    var marker: Marker {
+        let marker = Marker(by: self)
+        return marker
+    }
+}
 
-struct MarkerSettings {
+struct MarkerSettings: MarkerSettingsData {
     var route: String?
     var number: String?
     var degrees: CLLocationDegrees?
@@ -137,49 +159,13 @@ struct MarkerSettings {
     var lng: Double?
     var carType: CarType!
     
-    init(by data: String) {
-        let el = data.components(separatedBy: ",")
-        if el.count > 6 {
-            self.number = el[6]
-            self.route = el[1]
-            if el[4] == "" {
-                self.speed = -1
-            } else {
-                self.speed = Int(el[4])
-            }
-            
-            if el[5] == "" {
-                self.degrees = -1
-            } else {
-                self.degrees = Double(el[5])
-            }
-            
-            self.lat = parsCord(el[3])
-            self.lng = parsCord(el[2])
-            switch Int(el[0])! {
-            case 2:
-                carType = .bus
-            case 4:
-                carType = .minibus
-            case 3:
-                carType = .tram
-            case 6:
-                carType = .meg
-            case 1:
-                carType = .trolleybus
-            default: break
-            }
-        }
+    var primaryKey: String? {
+        return number
     }
     
     fileprivate func parsCord(_ data: String) -> Double {
         var cord = data
         cord.insert(".", at: data.index(data.startIndex, offsetBy: 2))
         return Double(cord)!
-    }
-    
-    var marker: Marker {
-        let marker = Marker(by: self)
-        return marker
     }
 }

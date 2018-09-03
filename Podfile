@@ -12,6 +12,8 @@ pod 'Appsee'
 pod 'TemporaryAlert'
 pod 'ChameleonFramework/Swift'
 pod 'Onboard'
+pod 'RealmSwift'
+pod 'SwiftyJSON', '~> 4.0'
 pod 'SVProgressHUD'
 end
 

@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import CoreLocation
+import ChameleonFramework
 
 class ListViewController: UIViewController {
     
@@ -19,7 +20,7 @@ class ListViewController: UIViewController {
     
     var routesByType = [Int: [RoutesText]]()
     
-    var city = CitySettings()
+    var city = CitySettings.shared
     var context: NSManagedObjectContext!
     
     override func viewDidLoad() {
@@ -27,8 +28,10 @@ class ListViewController: UIViewController {
         if #available(iOS 11.0, *) {
             self.navigationController?.navigationBar.prefersLargeTitles = true
             
-            let searchController = UISearchController(searchResultsController: nil)
-            navigationItem.searchController = searchController
+//            let searchController = UISearchController(searchResultsController: nil)
+//            tableView.backgroundColor = UIColor(red:0.33, green:0.38, blue:0.45, alpha:1.0)
+//            navigationItem.searchController = searchController
+            
         } else {
             // Fallback on earlier versions
         }
@@ -146,13 +149,24 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0: return "Аэропорт"
-        case 1: return "Трамваи"
-        case 2: return "Троллейбусы"
-        case 3: return "Маршрутки"
-        case 4: return "Автобусы"
-        default: return ""
+        if Locale.preferredLanguages[0] == "ru-RU" {
+            switch section {
+            case 0: return "Аэропорт"
+            case 1: return "Трамваи"
+            case 2: return "Троллейбусы"
+            case 3: return "Маршрутки"
+            case 4: return "Автобусы"
+            default: return ""
+            }
+        } else {
+            switch section {
+            case 0: return "Airport"
+            case 1: return "Trams"
+            case 2: return "Trolleybuses"
+            case 3: return "Minibuses"
+            case 4: return "Buses"
+            default: return ""
+            }
         }
     }
     
